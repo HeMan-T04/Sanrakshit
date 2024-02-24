@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: zaproxy
+Version: 0.2.0
+Summary: ZAP 2.14 API client
+Home-page: https://www.zaproxy.org/
+Download-URL: https://pypi.org/project/zaproxy/0.2.0/#files
+Author: ZAP Development Team
+Author-email: zaproxy-develop@googlegroups.com
+License: ASL2.0
+Platform: any
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Security
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: six
+Provides-Extra: tests
+Requires-Dist: mock ; extra == 'tests'
+Requires-Dist: pyhamcrest ; extra == 'tests'
+Requires-Dist: pylama ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: requests-mock ; extra == 'tests'
+
+Zed Attack Proxy 2.14 API Python client
