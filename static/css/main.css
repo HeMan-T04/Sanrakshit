@@ -291,7 +291,7 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin: 1rem 2.5rem 0 8rem;
+    margin: 1rem 2.5rem 0 8.5rem;
 }
 .btn-report {
     width: 14.4375rem;
@@ -310,4 +310,5 @@ body {
     justify-content: center;
     text-decoration: none;
     padding-top: 1rem;
+    margin-left:1rem;
 }

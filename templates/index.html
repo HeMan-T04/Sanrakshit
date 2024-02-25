@@ -23,13 +23,14 @@
             // Emit a message to start the spider
             socket.emit('start_spider', { 'target_url': targetUrl });
     
-            // Update status on button click
+            // Update status and show buttons on button click
             socket.on('update_status', function (data) {
                 document.getElementById('status').innerHTML = data.status;
     
                 if (data.completed) {
-                    // Show the report button when the spider completes
+                    // Show the report and download buttons when the spider completes
                     document.getElementById('reportButton').style.display = 'block';
+                    document.getElementById('downloadButton').style.display = 'block';
                 }
             });
         }
@@ -102,8 +103,10 @@
 
             <!-- Display status -->
             <div style="display:flex; margin-top:1rem;">
-            <div id="status"></div>
-            <a href="/show_report" id="reportButton" class="btn-report" style="display: none;">Show Report</a></div>
+                <div id="status"></div>
+                <a href="/show_report" id="reportButton" class="btn-report" style="display: none;">Show Report</a>
+                <!-- <a href="/download_report/{{ report_path }}" id="downloadButton" style="display: none;" class="btn-report">Download Report</a> -->
+            </div>
 
         </div>
     </div>
