@@ -1,17 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZAP Scan Web App</title>
+    <title>Vulnerability scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Add this script at the end of your HTML body -->
+    <script>
+        // Function to toggle dropdown visibility
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("myDropdown");
+            dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-toggle')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
+
 <body>
-    <h1>ZAP Scan Web App</h1>
-    <form method="post">
-        <label for="website_url">Enter Website URL:</label>
-        <input type="text" id="website_url" name="website_url" required>
-        <button type="submit">Run Scan</button>
-    </form>
+    <div>
+        <header>
+            <nav class="navbar">
+                <img class="nav-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+                <ul>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Pricing</li>
+                    <li>Resources</li>
+                </ul>
+                <div class="buttons">
+                    <a class="buttons" href="">Sign in</a>
+                    <button class="btn">Register</button>
+                </div>
+            </nav>
+        </header>
+        <div class="cont">
+            <div class="first" onmousedown="return false" onselectstart="return false">
+                <h1>Uncover <span class="hid">Hidden <br> Risks </span> with vulnerability <br> scanner</h1>
+            </div>
+            <div class="hero-img">
+                <img src="{{ url_for('static', filename='images/hero.png') }}" alt="">
+            </div>
+            <form method="post" action="/">
+            <div class="hero-buttons">
+                <input class="hero-btn" placehoder="Enter your URL" name="target_url"></input>
+                <!-- <button class="hero-btn1">Watch our demo</button> -->
+                <div class="dropdown" onmousedown="return false" onselectstart="return false">
+                    <button class="dropdown-toggle" onclick="toggleDropdown()"> Select Scan Type<img width="25" height="25" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/expand-arrow--v1.png" alt="expand-arrow--v1"/></button>
+                    <div class="dropdown-menu" id="myDropdown">
+                        <button type="submit" name="ScanningType" value="active" class="dropdown-item">Active Scan</button>
+                        <button type="submit" name="ScanningType" value="passive" class="dropdown-item">Passive Scan</button>
+                    </div>
+                    
+                </div>
+                </div>
+            </div>
+        </form>
 </body>
+
 </html>
