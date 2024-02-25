@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scanning Report</title>
+<link
+	href="2024-02-25-ZAP-Report-/normalize/normalize.css" rel="stylesheet">
+<link
+	href="2024-02-25-ZAP-Report-/themes/original/main.css" rel="stylesheet">
+<link
+	href="2024-02-25-ZAP-Report-/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>Scanning Report</h1>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-3-confidence-1"><span>Risk</span>=<span
+									class="risk-level">High</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(2)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Medium</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">High</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Low</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							
+							  
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Medium</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Informational</span>, <span>Confidence</span>=<span
+									class="confidence-level">Low</span> <span>(2)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">https://hemantkathuria.vercel.app</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">High</span>, <span class="risk-level">Medium</span>, <span class="risk-level">Low</span>, <span class="risk-level">Informational</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">High</span>, <span class="confidence-level">Medium</span>, <span class="confidence-level">Low</span>, <span class="confidence-level">False Positive</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">High</th>
+							<th scope="col">Medium</th>
+							<th scope="col">Low</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">High</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+							<td><span>1</span><br> <span class="additional-info-percentages">(10.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Medium</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+							<td><span>4</span><br> <span class="additional-info-percentages">(40.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Low</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Informational</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(30.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0.0%)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(40.0%)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(40.0%)</span></td>
+							<td><span>10</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>High</span><br>  <span
+									class="additional-info-percentages">(= High)</span>  
+							</th>
+							<th scope="col">
+								<span>Medium</span><br>   <span
+									class="additional-info-percentages">(&gt;= Medium)</span> 
+							</th>
+							<th scope="col">
+								<span>Low</span><br>   <span
+									class="additional-info-percentages">(&gt;= Low)</span> 
+							</th>
+							<th scope="col">
+								<span>Informational</span><br>   <span
+									class="additional-info-percentages">(&gt;= Informational)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">https://hemantkathuria.vercel.app</th>
+							
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(1)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(5)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(7)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(10)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">Cloud Metadata Potentially Exposed</a></th>
+							<td class="risk-level">High</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Absence of Anti-CSRF Tokens</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Cross-Domain Misconfiguration</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>14</span><br> <span
+								class="additional-info-percentages">(140.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Medium</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Strict-Transport-Security Header Not Set</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(10.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Low</td>
+							<td><span>15</span><br> <span
+								class="additional-info-percentages">(150.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">Information Disclosure - Suspicious Comments</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>8</span><br> <span
+								class="additional-info-percentages">(80.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">Re-examine Cache-control Directives</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(20.0%)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-9">Retrieved from Cache</a></th>
+							<td class="risk-level">Informational</td>
+							<td><span>1514</span><br> <span
+								class="additional-info-percentages">(15,140.0%)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>10</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				
+				
+				
+				
+				
+				
+				<li id="alerts--risk-3-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">High</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">Cloud Metadata Potentially Exposed</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/latest/meta-data/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Cloud Metadata Attack attempts to abuse a misconfigured NGINX server in order to access the instance metadata maintained by cloud service providers such as AWS, GCP and Azure.</p>
+
+<p>All of these providers provide metadata via an internal unroutable IP address &#39;169.254.169.254&#39; - this can be exposed by incorrectly configured NGINX servers and accessed by using this IP address in the Host header field.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>Based on the successful response status code cloud metadata may have been returned in the response. Check the response data to see if any cloud metadata has been returned.</p>
+
+<p>The meta data returned can include information that would allow an attacker to completely compromise the system.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (451 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/latest/meta-data/ HTTP/1.1
+host: 169.254.169.254
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (374 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 308 Permanent Redirect
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Type: text/html
+Date: Sun, 25 Feb 2024 01:41:09 GMT
+Location: https://vercel.com/
+Refresh: 0;url=https://vercel.com/
+Server: Vercel
+Strict-Transport-Security: max-age=63072000
+X-Vercel-Id: bom1::lq49r-1708825269019-6f1421c0ba3d
+content-length: 133
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (133 bytes)</summary>
+				
+				<pre><code>&lt;!doctype html&gt;
+&lt;!-- https://vercel.app --&gt;
+&lt;h1&gt;Redirecting (308)&lt;/h1&gt;
+The document has moved
+&lt;a href=&quot;https://vercel.com/&quot;&gt;here&lt;/a&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Attack</th>
+		<td><pre><code>169.254.169.254</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Do not trust any user data in NGINX configs. In this case it is probably the use of the $host variable which is set from the &#39;Host&#39; header and can be controlled by an attacker.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (444 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/ HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (582 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 1554169
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Disposition: inline
+Content-Length: 11218
+Content-Type: text/html; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:22 GMT
+Etag: &quot;0cf555f1cc16c2519488ece968d8e2fe&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Url
+X-Matched-Path: /
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::wvrcl-1708789762316-cf44e769a16d
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (11218 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charSet=&quot;utf-8&quot;/&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;/&gt;&lt;link rel=&quot;preload&quot; href=&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2&quot; as=&quot;font&quot; crossorigin=&quot;&quot; type=&quot;font/woff2&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/a18628feb20ba0f7.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/761dadba814ae197.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;preload&quot; as=&quot;script&quot; fetchPriority=&quot;low&quot; href=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/fd9d1056-30e544cb6de43a74.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/472-575ab5a3314ad148.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/main-app-b120517776e8c69c.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/260-c3fb89c23b0e342d.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/138-d1da8e772089d288.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/page-4c8448e1a7194608.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/layout-8d92e008ed8ddc15.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;title&gt;HeManT&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.&quot;/&gt;&lt;link rel=&quot;canonical&quot; href=&quot;https://hemantkathuria.vercel.app/&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;en-US&quot; href=&quot;https://hemantkathuria.vercel.app/en-US&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;de-DE&quot; href=&quot;https://hemantkathuria.vercel.app/de-DE&quot;/&gt;&lt;meta property=&quot;og:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta property=&quot;og:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta property=&quot;og:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;/&gt;&lt;meta name=&quot;twitter:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta name=&quot;twitter:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta name=&quot;twitter:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta name=&quot;twitter:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; type=&quot;image/x-icon&quot; sizes=&quot;16x16&quot;/&gt;&lt;meta name=&quot;next-size-adjust&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js&quot; crossorigin=&quot;&quot; noModule=&quot;&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body class=&quot;__className_e66fe9&quot;&gt;&lt;div&gt;&lt;div style=&quot;position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1&quot;&gt;&lt;canvas style=&quot;display:block;width:100%;height:100%&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div class=&quot;sideNav&quot;&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Home&quot;&gt;/&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#About&quot;&gt;/About&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Skills&quot;&gt;/Skills&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Projects&quot;&gt;/Projects&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Contact&quot;&gt;/Contact&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Home&quot; style=&quot;color:white;display:block;height:100vh&quot;&gt;&lt;span class=&quot;Name&quot;&gt;Hemant &lt;span class=&quot;Subtitle1&quot;&gt;Kathuria&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Subtitle&quot; id=&quot;Subtitle&quot;&gt;&lt;div class=&quot;Typewriter&quot; data-testid=&quot;typewriter-wrapper&quot;&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Skills&quot; id=&quot;Skills&quot;&gt;&lt;h3 class=&quot;Skills-title font-bold&quot;&gt;Skills&lt;/h3&gt;&lt;div class=&quot;Skills&quot;&gt;&lt;div class=&quot;Skills-grid&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;postion:fixed;z-index:1000;left:0;bottom:0&quot; id=&quot;alert-container&quot;&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Projects&quot; id=&quot;Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold&quot;&gt;Projects&lt;/h3&gt;&lt;div class=&quot;grid grid-cols-1 mx-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Contact&quot; class=&quot;Parent-Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold my-16&quot;&gt;Contact Me&lt;/h3&gt;&lt;div class=&quot;mx-auto w-full max-w-[70vw] sm:w-[50vw] md:w-[50vw] lg:w-[40vw]&quot;&gt;&lt;form&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;name&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Full Name&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Full Name&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;name&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;email&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Email Address&lt;/label&gt;&lt;input type=&quot;email&quot; placeholder=&quot;example@domain.com&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;email&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;subject&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Subject&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Enter your subject&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;subject&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;message&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Message&lt;/label&gt;&lt;textarea rows=&quot;4&quot; placeholder=&quot;Type your message&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;div&gt;&lt;button class=&quot;hover:shadow-form rounded-md bg-[#009900] py-3 px-8 text-base font-semibold text-white outline-none&quot;&gt;Submit&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/div&gt;&lt;/div&gt;&lt;section style=&quot;margin-top:10rem&quot;&gt;&lt;div class=&quot;max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8&quot;&gt;&lt;p class=&quot;mt-8 text-base leading-6 text-center text-gray-400&quot;&gt;© 2023 Hemant Kathuria. All rights reserved.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;script src=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script&gt;(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;1:HL[\&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2\&quot;,\&quot;font\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;font/woff2\&quot;}]\n2:HL[\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n0:\&quot;$L3\&quot;\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;4:HL[\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;5:I[33728,[],\&quot;\&quot;]\n7:I[29928,[],\&quot;\&quot;]\n8:I[56954,[],\&quot;\&quot;]\n9:I[7264,[],\&quot;\&quot;]\nb:I[48297,[],\&quot;\&quot;]\nc:I[719,[\&quot;260\&quot;,\&quot;static/chunks/260-c3fb89c23b0e342d.js\&quot;,\&quot;138\&quot;,\&quot;static/chunks/138-d1da8e772089d288.js\&quot;,\&quot;931\&quot;,\&quot;static/chunks/app/page-4c8448e1a7194608.js\&quot;],\&quot;\&quot;]\nd:I[44441,[\&quot;185\&quot;,\&quot;static/chunks/app/layout-8d92e008ed8ddc15.js\&quot;],\&quot;Analytics\&quot;]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;3:[[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]],[\&quot;$\&quot;,\&quot;$L5\&quot;,null,{\&quot;buildId\&quot;:\&quot;UcCPNEaTMHhux7G_JSYAy\&quot;,\&quot;assetPrefix\&quot;:\&quot;\&quot;,\&quot;initialCanonicalUrl\&quot;:\&quot;/\&quot;,\&quot;initialTree\&quot;:[\&quot;\&quot;,{\&quot;children\&quot;:[\&quot;__PAGE__\&quot;,{}]},\&quot;$undefined\&quot;,\&quot;$undefined\&quot;,true],\&quot;initialHead\&quot;:[false,\&quot;$L6\&quot;],\&quot;globalErrorComponent\&quot;:\&quot;$7\&quot;,\&quot;children\&quot;:[null,[\&quot;$\&quot;,\&quot;html\&quot;,null,{\&quot;lang\&quot;:\&quot;en\&quot;,\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;body\&quot;,null,{\&quot;className\&quot;:\&quot;__className_e66fe9\&quot;,\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;$L8\&quot;,null,{\&quot;parallelRouterKey\&quot;:\&quot;children\&quot;,\&quot;segmentPath\&quot;:[\&quot;children\&quot;],\&quot;loading\&quot;:\&quot;$undefined\&quot;,\&quot;loadingStyles\&quot;:\&quot;$undefined\&quot;,\&quot;loadingScripts\&quot;:\&quot;$undefined\&quot;,\&quot;hasLoading\&quot;:false,\&quot;error\&quot;:\&quot;$undefined\&quot;,\&quot;errorStyles\&quot;:\&quot;$undefined\&quot;,\&quot;errorScripts\&quot;:\&quot;$undefined\&quot;,\&quot;template\&quot;:[\&quot;$\&quot;,\&quot;$L9\&quot;,null,{}],\&quot;templateStyles\&quot;:\&quot;$undefined\&quot;,\&quot;templateScripts\&quot;:\&quot;$undefined\&quot;,\&quot;notFound\&quot;:[[\&quot;$\&quot;,\&quot;title\&quot;,null,{\&quot;children\&quot;:\&quot;404: This page could not be found.\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;fontFamily\&quot;:\&quot;system-ui,\\\&quot;Segoe UI\\\&quot;,Roboto,Helvetica,Arial,sans-serif,\\\&quot;Apple Color Emoji\\\&quot;,\\\&quot;Segoe UI Emoji\\\&quot;\&quot;,\&quot;height\&quot;:\&quot;100vh\&quot;,\&quot;textAlign\&quot;:\&quot;center\&quot;,\&quot;display\&quot;:\&quot;flex\&quot;,\&quot;flexDirection\&quot;:\&quot;column\&quot;,\&quot;alignItems\&quot;:\&quot;center\&quot;,\&quot;justifyContent\&quot;:\&quot;center\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;style\&quot;,null,{\&quot;dangerouslySetInnerHTML\&quot;:{\&quot;__html\&quot;:\&quot;body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\&quot;}}],[\&quot;$\&quot;,\&quot;h1\&quot;,null,{\&quot;className\&quot;:\&quot;next-error-h1\&quot;,\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;,\&quot;margin\&quot;:\&quot;0 20px 0 0\&quot;,\&quot;padding\&quot;:\&quot;0 23px 0 0\&quot;,\&quot;fontSize\&quot;:24,\&quot;fontWeight\&quot;:500,\&quot;verticalAlign\&quot;:\&quot;top\&quot;,\&quot;lineHeight\&quot;:\&quot;49px\&quot;},\&quot;children\&quot;:\&quot;404\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;h2\&quot;,null,{\&quot;style\&quot;:{\&quot;fontSize\&quot;:14,\&quot;fontWeight\&quot;:400,\&quot;lineHeight\&quot;:\&quot;49px\&quot;,\&quot;margin\&quot;:0},\&quot;children\&quot;:\&quot;This page could not be found.\&quot;}]}]]}]}]],\&quot;notFoundStyles\&quot;:[],\&quot;childProp\&quot;:{\&quot;current\&quot;:[\&quot;$La\&quot;,[\&quot;$\&quot;,\&quot;$Lb\&quot;,null,{\&quot;propsForComponent\&quot;:{\&quot;params\&quot;:{}},\&quot;Component\&quot;:\&quot;$c\&quot;,\&quot;isStaticGeneration\&quot;:true}],null],\&quot;segment\&quot;:\&quot;__PAGE__\&quot;},\&quot;styles\&quot;:[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]]}],[\&quot;$\&quot;,\&quot;$Ld\&quot;,null,{}]]}]}],null]}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;6:[[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;0\&quot;,{\&quot;name\&quot;:\&quot;viewport\&quot;,\&quot;content\&quot;:\&quot;width=device-width, initial-scale=1\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;1\&quot;,{\&quot;charSet\&quot;:\&quot;utf-8\&quot;}],[\&quot;$\&quot;,\&quot;title\&quot;,\&quot;2\&quot;,{\&quot;children\&quot;:\&quot;HeManT\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;3\&quot;,{\&quot;name\&quot;:\&quot;description\&quot;,\&quot;content\&quot;:\&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;4\&quot;,{\&quot;rel\&quot;:\&quot;canonical\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;5\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;en-US\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/en-US\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;6\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;de-DE\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/de-DE\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;7\&quot;,{\&quot;property\&quot;:\&quot;og:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;8\&quot;,{\&quot;property\&quot;:\&quot;og:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;9\&quot;,{\&quot;property\&quot;:\&quot;og:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;10\&quot;,{\&quot;property\&quot;:\&quot;og:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;11\&quot;,{\&quot;name\&quot;:\&quot;twitter:card\&quot;,\&quot;content\&quot;:\&quot;summary_large_image\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;12\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;13\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;14\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;15\&quot;,{\&quot;name\&quot;:\&quot;twitter:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;16\&quot;,{\&quot;rel\&quot;:\&quot;icon\&quot;,\&quot;href\&quot;:\&quot;/favicon.ico\&quot;,\&quot;type\&quot;:\&quot;image/x-icon\&quot;,\&quot;sizes\&quot;:\&quot;16x16\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;17\&quot;,{\&quot;name\&quot;:\&quot;next-size-adjust\&quot;}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;a:null\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;&quot;])&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">Cross-Domain Misconfiguration</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/_next/static/css/761dadba814ae197.css</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Web browser data loading may be possible, due to a Cross Origin Resource Sharing (CORS) misconfiguration on the web server</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The CORS misconfiguration on the web server permits cross-domain read requests from arbitrary third party domains, using unauthenticated APIs on this domain. Web browser implementations do not permit arbitrary third parties to read the response from authenticated APIs, however. This reduces the risk somewhat. This misconfiguration could be used by an attacker to access data that is available in an unauthenticated manner, but which uses some other form of security, such as IP address white-listing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (409 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/_next/static/css/761dadba814ae197.css HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Referer: https://hemantkathuria.vercel.app/
+Connection: keep-alive
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (581 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 290208
+Cache-Control: public,max-age=31536000,immutable
+Connection: keep-alive
+Content-Disposition: inline; filename=&quot;761dadba814ae197.css&quot;
+Content-Length: 2983
+Content-Type: text/css; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:22 GMT
+Etag: &quot;6a6a33814bd87869f84b7f455ce34679&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Matched-Path: /_next/static/css/761dadba814ae197.css
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::drbwg-1708789762990-f62987987a21
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2983 bytes)</summary>
+				
+				<pre><code>.Name{font-size:5rem;font-weight:700;top:25rem}.Name,.Subtitle{position:absolute;left:10rem}.Subtitle{font-size:2rem;font-family:monospace;top:31rem}.About{flex-direction:row;margin-left:12rem;margin-right:12rem;font-family:monospace}.About,.Parent-Skills{display:flex;justify-content:center;align-items:center;height:100vh;color:#fff}.Parent-Skills{flex-direction:column}.Parent-Projects{padding-top:5rem;flex-direction:column;height:auto}.Parent-Projects,.Skills{display:flex;justify-content:center;align-items:center;color:#fff}.Skills{flex-direction:row;margin-left:12rem;margin-right:12rem}.Skills-title{margin-bottom:1rem}.Project-title,.Skills-title{display:flex;flex-direction:row;font-size:3.75rem;line-height:1;justify-content:center;align-items:center}.Project-title{margin-bottom:2rem;font-weight:700}.Subtitle2{padding-left:1rem}.Projects-card,.Skills-grid{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:1rem}.Projects-card,.Skills-card,.Skills-grid{justify-content:center;align-items:center;color:#fff}.Skills-card{display:flex;flex-direction:row;padding:20%;background-color:#ffffff40!important;border-radius:2rem;margin-left:1rem;margin-right:1rem;border:none;outline:none;font-size:1.6rem;height:6rem;font-family:monospace}.Skills-card:hover{visibility:visible;opacity:1;will-change:transform;transform:perspective(300px) rotateX(0deg) rotateY(0deg)}.Skills-img{width:5rem;height:5rem;-o-object-fit:fill;object-fit:fill;margin-right:1rem;border-radius:9999px}.About-img{margin-right:3rem;border-radius:9999px;width:20rem;height:20rem}.About-content{display:flex;margin-right:5rem;flex-direction:column;font-size:3.75rem;line-height:1}.sideNav{position:fixed;z-index:1;right:0;margin-top:15rem;color:#fff}.sideNav-button{background-color:transparent;border:none;outline:none;cursor:pointer;padding:1rem;margin:1rem;font-size:1.5rem;text-align:center;font-family:monospace}.About-matter{margin-top:1.75rem;font-size:1.5rem;line-height:2rem}.About-button{background-color:#ffffff40!important;border-radius:9999px;border:none;outline:none;cursor:pointer;padding:1rem;margin-top:1rem;margin-bottom:1rem;width:100%;font-size:1.5rem;text-align:center;font-family:monospace}@media screen and (max-width:600px){body{overflow-x:hidden}.Name{font-size:3rem;top:15rem;left:3rem}.Subtitle{font-size:1rem;top:19rem;left:3rem}.Subtitle1,.Subtitle2{display:none}.About{display:inline;margin-left:5rem;margin-right:5rem;height:auto}.About-img{margin:2rem;text-align:center;width:12rem;height:12rem}.About-content{margin:2rem;font-size:2rem}.About-matter{margin-top:1rem;font-size:1rem}.sideNav{margin-top:5vh;padding:0;float:right;right:-2rem}.sideNav-button{padding:0;transform:rotate(90deg);margin-top:5rem;font-size:1rem;overflow-x:hidden}.Parent-Skills{height:auto;margin-top:20rem}.Project-title,.Skills-title{font-size:2rem}.Skills-grid{display:block}.Skills-card{display:flex;margin-left:0;margin-right:0;margin-bottom:1rem;height:auto;width:70vw;font-size:1.5rem}}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Access-Control-Allow-Origin: *</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that sensitive data is not available in an unauthenticated manner (using IP address white-listing, for instance).</p>
+
+<p>Configure the &quot;Access-Control-Allow-Origin&quot; HTTP header to a more restrictive set of domains, or remove all CORS headers entirely, to allow the web browser to enforce the Same Origin Policy (SOP) in a more restrictive manner.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (444 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/ HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (582 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 1554169
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Disposition: inline
+Content-Length: 11218
+Content-Type: text/html; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:22 GMT
+Etag: &quot;0cf555f1cc16c2519488ece968d8e2fe&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Url
+X-Matched-Path: /
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::wvrcl-1708789762316-cf44e769a16d
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (11218 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charSet=&quot;utf-8&quot;/&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;/&gt;&lt;link rel=&quot;preload&quot; href=&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2&quot; as=&quot;font&quot; crossorigin=&quot;&quot; type=&quot;font/woff2&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/a18628feb20ba0f7.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/761dadba814ae197.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;preload&quot; as=&quot;script&quot; fetchPriority=&quot;low&quot; href=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/fd9d1056-30e544cb6de43a74.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/472-575ab5a3314ad148.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/main-app-b120517776e8c69c.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/260-c3fb89c23b0e342d.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/138-d1da8e772089d288.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/page-4c8448e1a7194608.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/layout-8d92e008ed8ddc15.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;title&gt;HeManT&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.&quot;/&gt;&lt;link rel=&quot;canonical&quot; href=&quot;https://hemantkathuria.vercel.app/&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;en-US&quot; href=&quot;https://hemantkathuria.vercel.app/en-US&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;de-DE&quot; href=&quot;https://hemantkathuria.vercel.app/de-DE&quot;/&gt;&lt;meta property=&quot;og:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta property=&quot;og:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta property=&quot;og:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;/&gt;&lt;meta name=&quot;twitter:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta name=&quot;twitter:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta name=&quot;twitter:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta name=&quot;twitter:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; type=&quot;image/x-icon&quot; sizes=&quot;16x16&quot;/&gt;&lt;meta name=&quot;next-size-adjust&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js&quot; crossorigin=&quot;&quot; noModule=&quot;&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body class=&quot;__className_e66fe9&quot;&gt;&lt;div&gt;&lt;div style=&quot;position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1&quot;&gt;&lt;canvas style=&quot;display:block;width:100%;height:100%&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div class=&quot;sideNav&quot;&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Home&quot;&gt;/&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#About&quot;&gt;/About&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Skills&quot;&gt;/Skills&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Projects&quot;&gt;/Projects&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Contact&quot;&gt;/Contact&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Home&quot; style=&quot;color:white;display:block;height:100vh&quot;&gt;&lt;span class=&quot;Name&quot;&gt;Hemant &lt;span class=&quot;Subtitle1&quot;&gt;Kathuria&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Subtitle&quot; id=&quot;Subtitle&quot;&gt;&lt;div class=&quot;Typewriter&quot; data-testid=&quot;typewriter-wrapper&quot;&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Skills&quot; id=&quot;Skills&quot;&gt;&lt;h3 class=&quot;Skills-title font-bold&quot;&gt;Skills&lt;/h3&gt;&lt;div class=&quot;Skills&quot;&gt;&lt;div class=&quot;Skills-grid&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;postion:fixed;z-index:1000;left:0;bottom:0&quot; id=&quot;alert-container&quot;&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Projects&quot; id=&quot;Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold&quot;&gt;Projects&lt;/h3&gt;&lt;div class=&quot;grid grid-cols-1 mx-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Contact&quot; class=&quot;Parent-Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold my-16&quot;&gt;Contact Me&lt;/h3&gt;&lt;div class=&quot;mx-auto w-full max-w-[70vw] sm:w-[50vw] md:w-[50vw] lg:w-[40vw]&quot;&gt;&lt;form&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;name&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Full Name&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Full Name&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;name&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;email&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Email Address&lt;/label&gt;&lt;input type=&quot;email&quot; placeholder=&quot;example@domain.com&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;email&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;subject&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Subject&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Enter your subject&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;subject&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;message&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Message&lt;/label&gt;&lt;textarea rows=&quot;4&quot; placeholder=&quot;Type your message&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;div&gt;&lt;button class=&quot;hover:shadow-form rounded-md bg-[#009900] py-3 px-8 text-base font-semibold text-white outline-none&quot;&gt;Submit&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/div&gt;&lt;/div&gt;&lt;section style=&quot;margin-top:10rem&quot;&gt;&lt;div class=&quot;max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8&quot;&gt;&lt;p class=&quot;mt-8 text-base leading-6 text-center text-gray-400&quot;&gt;© 2023 Hemant Kathuria. All rights reserved.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;script src=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script&gt;(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;1:HL[\&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2\&quot;,\&quot;font\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;font/woff2\&quot;}]\n2:HL[\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n0:\&quot;$L3\&quot;\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;4:HL[\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;5:I[33728,[],\&quot;\&quot;]\n7:I[29928,[],\&quot;\&quot;]\n8:I[56954,[],\&quot;\&quot;]\n9:I[7264,[],\&quot;\&quot;]\nb:I[48297,[],\&quot;\&quot;]\nc:I[719,[\&quot;260\&quot;,\&quot;static/chunks/260-c3fb89c23b0e342d.js\&quot;,\&quot;138\&quot;,\&quot;static/chunks/138-d1da8e772089d288.js\&quot;,\&quot;931\&quot;,\&quot;static/chunks/app/page-4c8448e1a7194608.js\&quot;],\&quot;\&quot;]\nd:I[44441,[\&quot;185\&quot;,\&quot;static/chunks/app/layout-8d92e008ed8ddc15.js\&quot;],\&quot;Analytics\&quot;]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;3:[[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]],[\&quot;$\&quot;,\&quot;$L5\&quot;,null,{\&quot;buildId\&quot;:\&quot;UcCPNEaTMHhux7G_JSYAy\&quot;,\&quot;assetPrefix\&quot;:\&quot;\&quot;,\&quot;initialCanonicalUrl\&quot;:\&quot;/\&quot;,\&quot;initialTree\&quot;:[\&quot;\&quot;,{\&quot;children\&quot;:[\&quot;__PAGE__\&quot;,{}]},\&quot;$undefined\&quot;,\&quot;$undefined\&quot;,true],\&quot;initialHead\&quot;:[false,\&quot;$L6\&quot;],\&quot;globalErrorComponent\&quot;:\&quot;$7\&quot;,\&quot;children\&quot;:[null,[\&quot;$\&quot;,\&quot;html\&quot;,null,{\&quot;lang\&quot;:\&quot;en\&quot;,\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;body\&quot;,null,{\&quot;className\&quot;:\&quot;__className_e66fe9\&quot;,\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;$L8\&quot;,null,{\&quot;parallelRouterKey\&quot;:\&quot;children\&quot;,\&quot;segmentPath\&quot;:[\&quot;children\&quot;],\&quot;loading\&quot;:\&quot;$undefined\&quot;,\&quot;loadingStyles\&quot;:\&quot;$undefined\&quot;,\&quot;loadingScripts\&quot;:\&quot;$undefined\&quot;,\&quot;hasLoading\&quot;:false,\&quot;error\&quot;:\&quot;$undefined\&quot;,\&quot;errorStyles\&quot;:\&quot;$undefined\&quot;,\&quot;errorScripts\&quot;:\&quot;$undefined\&quot;,\&quot;template\&quot;:[\&quot;$\&quot;,\&quot;$L9\&quot;,null,{}],\&quot;templateStyles\&quot;:\&quot;$undefined\&quot;,\&quot;templateScripts\&quot;:\&quot;$undefined\&quot;,\&quot;notFound\&quot;:[[\&quot;$\&quot;,\&quot;title\&quot;,null,{\&quot;children\&quot;:\&quot;404: This page could not be found.\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;fontFamily\&quot;:\&quot;system-ui,\\\&quot;Segoe UI\\\&quot;,Roboto,Helvetica,Arial,sans-serif,\\\&quot;Apple Color Emoji\\\&quot;,\\\&quot;Segoe UI Emoji\\\&quot;\&quot;,\&quot;height\&quot;:\&quot;100vh\&quot;,\&quot;textAlign\&quot;:\&quot;center\&quot;,\&quot;display\&quot;:\&quot;flex\&quot;,\&quot;flexDirection\&quot;:\&quot;column\&quot;,\&quot;alignItems\&quot;:\&quot;center\&quot;,\&quot;justifyContent\&quot;:\&quot;center\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;style\&quot;,null,{\&quot;dangerouslySetInnerHTML\&quot;:{\&quot;__html\&quot;:\&quot;body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\&quot;}}],[\&quot;$\&quot;,\&quot;h1\&quot;,null,{\&quot;className\&quot;:\&quot;next-error-h1\&quot;,\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;,\&quot;margin\&quot;:\&quot;0 20px 0 0\&quot;,\&quot;padding\&quot;:\&quot;0 23px 0 0\&quot;,\&quot;fontSize\&quot;:24,\&quot;fontWeight\&quot;:500,\&quot;verticalAlign\&quot;:\&quot;top\&quot;,\&quot;lineHeight\&quot;:\&quot;49px\&quot;},\&quot;children\&quot;:\&quot;404\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;h2\&quot;,null,{\&quot;style\&quot;:{\&quot;fontSize\&quot;:14,\&quot;fontWeight\&quot;:400,\&quot;lineHeight\&quot;:\&quot;49px\&quot;,\&quot;margin\&quot;:0},\&quot;children\&quot;:\&quot;This page could not be found.\&quot;}]}]]}]}]],\&quot;notFoundStyles\&quot;:[],\&quot;childProp\&quot;:{\&quot;current\&quot;:[\&quot;$La\&quot;,[\&quot;$\&quot;,\&quot;$Lb\&quot;,null,{\&quot;propsForComponent\&quot;:{\&quot;params\&quot;:{}},\&quot;Component\&quot;:\&quot;$c\&quot;,\&quot;isStaticGeneration\&quot;:true}],null],\&quot;segment\&quot;:\&quot;__PAGE__\&quot;},\&quot;styles\&quot;:[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]]}],[\&quot;$\&quot;,\&quot;$Ld\&quot;,null,{}]]}]}],null]}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;6:[[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;0\&quot;,{\&quot;name\&quot;:\&quot;viewport\&quot;,\&quot;content\&quot;:\&quot;width=device-width, initial-scale=1\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;1\&quot;,{\&quot;charSet\&quot;:\&quot;utf-8\&quot;}],[\&quot;$\&quot;,\&quot;title\&quot;,\&quot;2\&quot;,{\&quot;children\&quot;:\&quot;HeManT\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;3\&quot;,{\&quot;name\&quot;:\&quot;description\&quot;,\&quot;content\&quot;:\&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;4\&quot;,{\&quot;rel\&quot;:\&quot;canonical\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;5\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;en-US\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/en-US\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;6\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;de-DE\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/de-DE\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;7\&quot;,{\&quot;property\&quot;:\&quot;og:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;8\&quot;,{\&quot;property\&quot;:\&quot;og:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;9\&quot;,{\&quot;property\&quot;:\&quot;og:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;10\&quot;,{\&quot;property\&quot;:\&quot;og:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;11\&quot;,{\&quot;name\&quot;:\&quot;twitter:card\&quot;,\&quot;content\&quot;:\&quot;summary_large_image\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;12\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;13\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;14\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;15\&quot;,{\&quot;name\&quot;:\&quot;twitter:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;16\&quot;,{\&quot;rel\&quot;:\&quot;icon\&quot;,\&quot;href\&quot;:\&quot;/favicon.ico\&quot;,\&quot;type\&quot;:\&quot;image/x-icon\&quot;,\&quot;sizes\&quot;:\&quot;16x16\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;17\&quot;,{\&quot;name\&quot;:\&quot;next-size-adjust\&quot;}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;a:null\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;&quot;])&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-frame-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Medium</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Absence of Anti-CSRF Tokens</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/05-Testing_for_Cross_Site_Request_Forgery">WSTG-v42-SESS-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>No Anti-CSRF tokens were found in a HTML submission form.</p>
+
+<p>A cross-site request forgery is an attack that involves forcing a victim to send an HTTP request to a target destination without their knowledge or intent in order to perform an action as the victim. The underlying cause is application functionality using predictable URL/form actions in a repeatable way. The nature of the attack is that CSRF exploits the trust that a web site has for a user. By contrast, cross-site scripting (XSS) exploits the trust that a user has for a web site. Like XSS, CSRF attacks are not necessarily cross-site, but they can be. Cross-site request forgery is also known as CSRF, XSRF, one-click attack, session riding, confused deputy, and sea surf.</p>
+
+<p>CSRF attacks are effective in a number of situations, including:</p>
+
+<p>    * The victim has an active session on the target site.</p>
+
+<p>    * The victim is authenticated via HTTP auth on the target site.</p>
+
+<p>    * The victim is on the same local network as the target site.</p>
+
+<p>CSRF has primarily been used to perform an action against a target site using the victim&#39;s privileges, but recent techniques have been discovered to disclose information by gaining access to the response. The risk of information disclosure is dramatically increased when the target site is vulnerable to XSS, because XSS can be used as a platform for CSRF, allowing the attack to operate within the bounds of the same-origin policy.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>No known Anti-CSRF token [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] was found in the following HTML form: [Form 1: &quot;email&quot; &quot;name&quot; &quot;subject&quot; ].</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (444 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/ HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (582 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 1554169
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Disposition: inline
+Content-Length: 11218
+Content-Type: text/html; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:22 GMT
+Etag: &quot;0cf555f1cc16c2519488ece968d8e2fe&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Url
+X-Matched-Path: /
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::wvrcl-1708789762316-cf44e769a16d
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (11218 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charSet=&quot;utf-8&quot;/&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;/&gt;&lt;link rel=&quot;preload&quot; href=&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2&quot; as=&quot;font&quot; crossorigin=&quot;&quot; type=&quot;font/woff2&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/a18628feb20ba0f7.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/761dadba814ae197.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;preload&quot; as=&quot;script&quot; fetchPriority=&quot;low&quot; href=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/fd9d1056-30e544cb6de43a74.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/472-575ab5a3314ad148.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/main-app-b120517776e8c69c.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/260-c3fb89c23b0e342d.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/138-d1da8e772089d288.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/page-4c8448e1a7194608.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/layout-8d92e008ed8ddc15.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;title&gt;HeManT&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.&quot;/&gt;&lt;link rel=&quot;canonical&quot; href=&quot;https://hemantkathuria.vercel.app/&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;en-US&quot; href=&quot;https://hemantkathuria.vercel.app/en-US&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;de-DE&quot; href=&quot;https://hemantkathuria.vercel.app/de-DE&quot;/&gt;&lt;meta property=&quot;og:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta property=&quot;og:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta property=&quot;og:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;/&gt;&lt;meta name=&quot;twitter:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta name=&quot;twitter:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta name=&quot;twitter:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta name=&quot;twitter:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; type=&quot;image/x-icon&quot; sizes=&quot;16x16&quot;/&gt;&lt;meta name=&quot;next-size-adjust&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js&quot; crossorigin=&quot;&quot; noModule=&quot;&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body class=&quot;__className_e66fe9&quot;&gt;&lt;div&gt;&lt;div style=&quot;position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1&quot;&gt;&lt;canvas style=&quot;display:block;width:100%;height:100%&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div class=&quot;sideNav&quot;&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Home&quot;&gt;/&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#About&quot;&gt;/About&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Skills&quot;&gt;/Skills&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Projects&quot;&gt;/Projects&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Contact&quot;&gt;/Contact&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Home&quot; style=&quot;color:white;display:block;height:100vh&quot;&gt;&lt;span class=&quot;Name&quot;&gt;Hemant &lt;span class=&quot;Subtitle1&quot;&gt;Kathuria&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Subtitle&quot; id=&quot;Subtitle&quot;&gt;&lt;div class=&quot;Typewriter&quot; data-testid=&quot;typewriter-wrapper&quot;&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Skills&quot; id=&quot;Skills&quot;&gt;&lt;h3 class=&quot;Skills-title font-bold&quot;&gt;Skills&lt;/h3&gt;&lt;div class=&quot;Skills&quot;&gt;&lt;div class=&quot;Skills-grid&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;postion:fixed;z-index:1000;left:0;bottom:0&quot; id=&quot;alert-container&quot;&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Projects&quot; id=&quot;Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold&quot;&gt;Projects&lt;/h3&gt;&lt;div class=&quot;grid grid-cols-1 mx-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Contact&quot; class=&quot;Parent-Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold my-16&quot;&gt;Contact Me&lt;/h3&gt;&lt;div class=&quot;mx-auto w-full max-w-[70vw] sm:w-[50vw] md:w-[50vw] lg:w-[40vw]&quot;&gt;&lt;form&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;name&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Full Name&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Full Name&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;name&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;email&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Email Address&lt;/label&gt;&lt;input type=&quot;email&quot; placeholder=&quot;example@domain.com&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;email&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;subject&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Subject&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Enter your subject&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;subject&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;message&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Message&lt;/label&gt;&lt;textarea rows=&quot;4&quot; placeholder=&quot;Type your message&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;div&gt;&lt;button class=&quot;hover:shadow-form rounded-md bg-[#009900] py-3 px-8 text-base font-semibold text-white outline-none&quot;&gt;Submit&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/div&gt;&lt;/div&gt;&lt;section style=&quot;margin-top:10rem&quot;&gt;&lt;div class=&quot;max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8&quot;&gt;&lt;p class=&quot;mt-8 text-base leading-6 text-center text-gray-400&quot;&gt;© 2023 Hemant Kathuria. All rights reserved.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;script src=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script&gt;(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;1:HL[\&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2\&quot;,\&quot;font\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;font/woff2\&quot;}]\n2:HL[\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n0:\&quot;$L3\&quot;\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;4:HL[\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;5:I[33728,[],\&quot;\&quot;]\n7:I[29928,[],\&quot;\&quot;]\n8:I[56954,[],\&quot;\&quot;]\n9:I[7264,[],\&quot;\&quot;]\nb:I[48297,[],\&quot;\&quot;]\nc:I[719,[\&quot;260\&quot;,\&quot;static/chunks/260-c3fb89c23b0e342d.js\&quot;,\&quot;138\&quot;,\&quot;static/chunks/138-d1da8e772089d288.js\&quot;,\&quot;931\&quot;,\&quot;static/chunks/app/page-4c8448e1a7194608.js\&quot;],\&quot;\&quot;]\nd:I[44441,[\&quot;185\&quot;,\&quot;static/chunks/app/layout-8d92e008ed8ddc15.js\&quot;],\&quot;Analytics\&quot;]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;3:[[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]],[\&quot;$\&quot;,\&quot;$L5\&quot;,null,{\&quot;buildId\&quot;:\&quot;UcCPNEaTMHhux7G_JSYAy\&quot;,\&quot;assetPrefix\&quot;:\&quot;\&quot;,\&quot;initialCanonicalUrl\&quot;:\&quot;/\&quot;,\&quot;initialTree\&quot;:[\&quot;\&quot;,{\&quot;children\&quot;:[\&quot;__PAGE__\&quot;,{}]},\&quot;$undefined\&quot;,\&quot;$undefined\&quot;,true],\&quot;initialHead\&quot;:[false,\&quot;$L6\&quot;],\&quot;globalErrorComponent\&quot;:\&quot;$7\&quot;,\&quot;children\&quot;:[null,[\&quot;$\&quot;,\&quot;html\&quot;,null,{\&quot;lang\&quot;:\&quot;en\&quot;,\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;body\&quot;,null,{\&quot;className\&quot;:\&quot;__className_e66fe9\&quot;,\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;$L8\&quot;,null,{\&quot;parallelRouterKey\&quot;:\&quot;children\&quot;,\&quot;segmentPath\&quot;:[\&quot;children\&quot;],\&quot;loading\&quot;:\&quot;$undefined\&quot;,\&quot;loadingStyles\&quot;:\&quot;$undefined\&quot;,\&quot;loadingScripts\&quot;:\&quot;$undefined\&quot;,\&quot;hasLoading\&quot;:false,\&quot;error\&quot;:\&quot;$undefined\&quot;,\&quot;errorStyles\&quot;:\&quot;$undefined\&quot;,\&quot;errorScripts\&quot;:\&quot;$undefined\&quot;,\&quot;template\&quot;:[\&quot;$\&quot;,\&quot;$L9\&quot;,null,{}],\&quot;templateStyles\&quot;:\&quot;$undefined\&quot;,\&quot;templateScripts\&quot;:\&quot;$undefined\&quot;,\&quot;notFound\&quot;:[[\&quot;$\&quot;,\&quot;title\&quot;,null,{\&quot;children\&quot;:\&quot;404: This page could not be found.\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;fontFamily\&quot;:\&quot;system-ui,\\\&quot;Segoe UI\\\&quot;,Roboto,Helvetica,Arial,sans-serif,\\\&quot;Apple Color Emoji\\\&quot;,\\\&quot;Segoe UI Emoji\\\&quot;\&quot;,\&quot;height\&quot;:\&quot;100vh\&quot;,\&quot;textAlign\&quot;:\&quot;center\&quot;,\&quot;display\&quot;:\&quot;flex\&quot;,\&quot;flexDirection\&quot;:\&quot;column\&quot;,\&quot;alignItems\&quot;:\&quot;center\&quot;,\&quot;justifyContent\&quot;:\&quot;center\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;style\&quot;,null,{\&quot;dangerouslySetInnerHTML\&quot;:{\&quot;__html\&quot;:\&quot;body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\&quot;}}],[\&quot;$\&quot;,\&quot;h1\&quot;,null,{\&quot;className\&quot;:\&quot;next-error-h1\&quot;,\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;,\&quot;margin\&quot;:\&quot;0 20px 0 0\&quot;,\&quot;padding\&quot;:\&quot;0 23px 0 0\&quot;,\&quot;fontSize\&quot;:24,\&quot;fontWeight\&quot;:500,\&quot;verticalAlign\&quot;:\&quot;top\&quot;,\&quot;lineHeight\&quot;:\&quot;49px\&quot;},\&quot;children\&quot;:\&quot;404\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;h2\&quot;,null,{\&quot;style\&quot;:{\&quot;fontSize\&quot;:14,\&quot;fontWeight\&quot;:400,\&quot;lineHeight\&quot;:\&quot;49px\&quot;,\&quot;margin\&quot;:0},\&quot;children\&quot;:\&quot;This page could not be found.\&quot;}]}]]}]}]],\&quot;notFoundStyles\&quot;:[],\&quot;childProp\&quot;:{\&quot;current\&quot;:[\&quot;$La\&quot;,[\&quot;$\&quot;,\&quot;$Lb\&quot;,null,{\&quot;propsForComponent\&quot;:{\&quot;params\&quot;:{}},\&quot;Component\&quot;:\&quot;$c\&quot;,\&quot;isStaticGeneration\&quot;:true}],null],\&quot;segment\&quot;:\&quot;__PAGE__\&quot;},\&quot;styles\&quot;:[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]]}],[\&quot;$\&quot;,\&quot;$Ld\&quot;,null,{}]]}]}],null]}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;6:[[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;0\&quot;,{\&quot;name\&quot;:\&quot;viewport\&quot;,\&quot;content\&quot;:\&quot;width=device-width, initial-scale=1\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;1\&quot;,{\&quot;charSet\&quot;:\&quot;utf-8\&quot;}],[\&quot;$\&quot;,\&quot;title\&quot;,\&quot;2\&quot;,{\&quot;children\&quot;:\&quot;HeManT\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;3\&quot;,{\&quot;name\&quot;:\&quot;description\&quot;,\&quot;content\&quot;:\&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;4\&quot;,{\&quot;rel\&quot;:\&quot;canonical\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;5\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;en-US\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/en-US\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;6\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;de-DE\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/de-DE\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;7\&quot;,{\&quot;property\&quot;:\&quot;og:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;8\&quot;,{\&quot;property\&quot;:\&quot;og:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;9\&quot;,{\&quot;property\&quot;:\&quot;og:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;10\&quot;,{\&quot;property\&quot;:\&quot;og:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;11\&quot;,{\&quot;name\&quot;:\&quot;twitter:card\&quot;,\&quot;content\&quot;:\&quot;summary_large_image\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;12\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;13\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;14\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;15\&quot;,{\&quot;name\&quot;:\&quot;twitter:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;16\&quot;,{\&quot;rel\&quot;:\&quot;icon\&quot;,\&quot;href\&quot;:\&quot;/favicon.ico\&quot;,\&quot;type\&quot;:\&quot;image/x-icon\&quot;,\&quot;sizes\&quot;:\&quot;16x16\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;17\&quot;,{\&quot;name\&quot;:\&quot;next-size-adjust\&quot;}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;a:null\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;&quot;])&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;form&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Phase: Architecture and Design</p>
+
+<p>Use a vetted library or framework that does not allow this weakness to occur or provides constructs that make this weakness easier to avoid.</p>
+
+<p>For example, use anti-CSRF packages such as the OWASP CSRFGuard.</p>
+
+<p>Phase: Implementation</p>
+
+<p>Ensure that your application is free of cross-site scripting issues, because most CSRF defenses can be bypassed using attacker-controlled script.</p>
+
+<p>Phase: Architecture and Design</p>
+
+<p>Generate a unique nonce for each form, place the nonce into the form, and verify the nonce upon receipt of the form. Be sure that the nonce is not predictable (CWE-330).</p>
+
+<p>Note that this can be bypassed using XSS.</p>
+
+<p>Identify especially dangerous operations. When the user performs a dangerous operation, send a separate confirmation request to ensure that the user intended to perform that operation.</p>
+
+<p>Note that this can be bypassed using XSS.</p>
+
+<p>Use the ESAPI Session Management control.</p>
+
+<p>This control includes a component for CSRF.</p>
+
+<p>Do not use the GET method for any request that triggers a state change.</p>
+
+<p>Phase: Implementation</p>
+
+<p>Check the HTTP Referer header to see if the request originated from an expected page. This could break legitimate functionality, because users or proxies may have disabled sending the Referer for privacy reasons.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">High</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Strict-Transport-Security Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>HTTP Strict Transport Security (HSTS) is a web security policy mechanism whereby a web server declares that complying user agents (such as a web browser) are to interact with it using only secure HTTPS connections (i.e. HTTP layered over TLS/SSL). HSTS is an IETF standards track protocol and is specified in RFC 6797.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (495 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/ HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+If-None-Match: &quot;0cf555f1cc16c2519488ece968d8e2fe&quot;
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (231 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 304 Not Modified
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Date: Sat, 24 Feb 2024 15:49:25 GMT
+Server: Vercel
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::xvw67-1708789765458-ec20a64006ec
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to enforce Strict-Transport-Security.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Low</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/_next/static/css/761dadba814ae197.css</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (409 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/_next/static/css/761dadba814ae197.css HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Referer: https://hemantkathuria.vercel.app/
+Connection: keep-alive
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (581 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 290208
+Cache-Control: public,max-age=31536000,immutable
+Connection: keep-alive
+Content-Disposition: inline; filename=&quot;761dadba814ae197.css&quot;
+Content-Length: 2983
+Content-Type: text/css; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:22 GMT
+Etag: &quot;6a6a33814bd87869f84b7f455ce34679&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Matched-Path: /_next/static/css/761dadba814ae197.css
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::drbwg-1708789762990-f62987987a21
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2983 bytes)</summary>
+				
+				<pre><code>.Name{font-size:5rem;font-weight:700;top:25rem}.Name,.Subtitle{position:absolute;left:10rem}.Subtitle{font-size:2rem;font-family:monospace;top:31rem}.About{flex-direction:row;margin-left:12rem;margin-right:12rem;font-family:monospace}.About,.Parent-Skills{display:flex;justify-content:center;align-items:center;height:100vh;color:#fff}.Parent-Skills{flex-direction:column}.Parent-Projects{padding-top:5rem;flex-direction:column;height:auto}.Parent-Projects,.Skills{display:flex;justify-content:center;align-items:center;color:#fff}.Skills{flex-direction:row;margin-left:12rem;margin-right:12rem}.Skills-title{margin-bottom:1rem}.Project-title,.Skills-title{display:flex;flex-direction:row;font-size:3.75rem;line-height:1;justify-content:center;align-items:center}.Project-title{margin-bottom:2rem;font-weight:700}.Subtitle2{padding-left:1rem}.Projects-card,.Skills-grid{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:1rem}.Projects-card,.Skills-card,.Skills-grid{justify-content:center;align-items:center;color:#fff}.Skills-card{display:flex;flex-direction:row;padding:20%;background-color:#ffffff40!important;border-radius:2rem;margin-left:1rem;margin-right:1rem;border:none;outline:none;font-size:1.6rem;height:6rem;font-family:monospace}.Skills-card:hover{visibility:visible;opacity:1;will-change:transform;transform:perspective(300px) rotateX(0deg) rotateY(0deg)}.Skills-img{width:5rem;height:5rem;-o-object-fit:fill;object-fit:fill;margin-right:1rem;border-radius:9999px}.About-img{margin-right:3rem;border-radius:9999px;width:20rem;height:20rem}.About-content{display:flex;margin-right:5rem;flex-direction:column;font-size:3.75rem;line-height:1}.sideNav{position:fixed;z-index:1;right:0;margin-top:15rem;color:#fff}.sideNav-button{background-color:transparent;border:none;outline:none;cursor:pointer;padding:1rem;margin:1rem;font-size:1.5rem;text-align:center;font-family:monospace}.About-matter{margin-top:1.75rem;font-size:1.5rem;line-height:2rem}.About-button{background-color:#ffffff40!important;border-radius:9999px;border:none;outline:none;cursor:pointer;padding:1rem;margin-top:1rem;margin-bottom:1rem;width:100%;font-size:1.5rem;text-align:center;font-family:monospace}@media screen and (max-width:600px){body{overflow-x:hidden}.Name{font-size:3rem;top:15rem;left:3rem}.Subtitle{font-size:1rem;top:19rem;left:3rem}.Subtitle1,.Subtitle2{display:none}.About{display:inline;margin-left:5rem;margin-right:5rem;height:auto}.About-img{margin:2rem;text-align:center;width:12rem;height:12rem}.About-content{margin:2rem;font-size:2rem}.About-matter{margin-top:1rem;font-size:1rem}.sideNav{margin-top:5vh;padding:0;float:right;right:-2rem}.sideNav-button{padding:0;transform:rotate(90deg);margin-top:5rem;font-size:1rem;overflow-x:hidden}.Parent-Skills{height:auto;margin-top:20rem}.Project-title,.Skills-title{font-size:2rem}.Skills-grid{display:block}.Skills-card{display:flex;margin-left:0;margin-right:0;margin-bottom:1rem;height:auto;width:70vw;font-size:1.5rem}}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>x-content-type-options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Medium</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-9">Retrieved from Cache</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/_next/static/css/a18628feb20ba0f7.css</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses">WSTG-v42-ATHN-06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The content was retrieved from a shared cache. If the response data is sensitive, personal or user-specific, this may result in sensitive information being leaked. In some cases, this may even result in a user gaining complete control of the session of another user, depending on the configuration of the caching components in use in their environment. This is primarily an issue where caching servers such as &quot;proxy&quot; caches are configured on the local network. This configuration is typically found in corporate or educational environments, for instance. </p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The presence of the &#39;Age&#39; header indicates that that a HTTP/1.1 compliant caching server is in use.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (409 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/_next/static/css/a18628feb20ba0f7.css HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Referer: https://hemantkathuria.vercel.app/
+Connection: keep-alive
+Sec-Fetch-Dest: style
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (582 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 290208
+Cache-Control: public,max-age=31536000,immutable
+Connection: keep-alive
+Content-Disposition: inline; filename=&quot;a18628feb20ba0f7.css&quot;
+Content-Length: 12741
+Content-Type: text/css; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:22 GMT
+Etag: &quot;ba4a926a249f048699391c68635fe3d3&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Matched-Path: /_next/static/css/a18628feb20ba0f7.css
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::smjl7-1708789762985-886b62d2804e
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (12741 bytes)</summary>
+				
+				<pre><code>@font-face{font-family:__Inter_e66fe9;font-style:normal;font-weight:100 900;font-display:swap;src:url(/_next/static/media/ec159349637c90ad-s.woff2) format(&quot;woff2&quot;);unicode-range:U+0460-052f,U+1c80-1c88,U+20b4,U+2de0-2dff,U+a640-a69f,U+fe2e-fe2f}@font-face{font-family:__Inter_e66fe9;font-style:normal;font-weight:100 900;font-display:swap;src:url(/_next/static/media/513657b02c5c193f-s.woff2) format(&quot;woff2&quot;);unicode-range:U+0301,U+0400-045f,U+0490-0491,U+04b0-04b1,U+2116}@font-face{font-family:__Inter_e66fe9;font-style:normal;font-weight:100 900;font-display:swap;src:url(/_next/static/media/fd4db3eb5472fc27-s.woff2) format(&quot;woff2&quot;);unicode-range:U+1f??}@font-face{font-family:__Inter_e66fe9;font-style:normal;font-weight:100 900;font-display:swap;src:url(/_next/static/media/51ed15f9841b9f9d-s.woff2) format(&quot;woff2&quot;);unicode-range:U+0370-03ff}@font-face{font-family:__Inter_e66fe9;font-style:normal;font-weight:100 900;font-display:swap;src:url(/_next/static/media/05a31a2ca4975f99-s.woff2) format(&quot;woff2&quot;);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01a0-01a1,U+01af-01b0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1ea0-1ef9,U+20ab}@font-face{font-family:__Inter_e66fe9;font-style:normal;font-weight:100 900;font-display:swap;src:url(/_next/static/media/d6b16ce4a6175f26-s.woff2) format(&quot;woff2&quot;);unicode-range:U+0100-02af,U+0304,U+0308,U+0329,U+1e00-1e9f,U+1ef2-1eff,U+2020,U+20a0-20ab,U+20ad-20cf,U+2113,U+2c60-2c7f,U+a720-a7ff}@font-face{font-family:__Inter_e66fe9;font-style:normal;font-weight:100 900;font-display:swap;src:url(/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2) format(&quot;woff2&quot;);unicode-range:U+00??,U+0131,U+0152-0153,U+02bb-02bc,U+02c6,U+02da,U+02dc,U+0304,U+0308,U+0329,U+2000-206f,U+2074,U+20ac,U+2122,U+2191,U+2193,U+2212,U+2215,U+feff,U+fffd}@font-face{font-family:__Inter_Fallback_e66fe9;src:local(&quot;Arial&quot;);ascent-override:90.20%;descent-override:22.48%;line-gap-override:0.00%;size-adjust:107.40%}.__className_e66fe9{font-family:__Inter_e66fe9,__Inter_Fallback_e66fe9;font-style:normal}
+
+/*
+! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:&quot;&quot;}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.container{width:100%}@media (min-width:640px){.container{max-width:640px}}@media (min-width:768px){.container{max-width:768px}}@media (min-width:1024px){.container{max-width:1024px}}@media (min-width:1280px){.container{max-width:1280px}}@media (min-width:1536px){.container{max-width:1536px}}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.bottom-0{bottom:0}.right-0{right:0}.top-0{top:0}.mx-12{margin-left:3rem;margin-right:3rem}.mx-auto{margin-left:auto;margin-right:auto}.my-16{margin-top:4rem;margin-bottom:4rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-5{margin-bottom:1.25rem}.mr-2{margin-right:.5rem}.mt-8{margin-top:2rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.h-48{height:12rem}.h-6{height:1.5rem}.w-48{width:12rem}.w-6{width:1.5rem}.w-full{width:100%}.max-w-\[70vw\]{max-width:70vw}.max-w-screen-xl{max-width:1280px}.max-w-sm{max-width:24rem}.flex-grow{flex-grow:1}.resize-none{resize:none}.resize{resize:both}.auto-cols-max{grid-auto-columns:max-content}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-row{flex-direction:row}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-center{justify-content:center}.gap-4{gap:1rem}.space-x-6&gt;:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-8&gt;:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:.5rem}.rounded-md{border-radius:.375rem}.border{border-width:1px}.border-\[\#e0e0e0\]{--tw-border-opacity:1;border-color:rgb(224 224 224/var(--tw-border-opacity))}.border-red-400{--tw-border-opacity:1;border-color:rgb(248 113 113/var(--tw-border-opacity))}.bg-\[\#009900\]{--tw-bg-opacity:1;background-color:rgb(0 153 0/var(--tw-bg-opacity))}.bg-\[\#ffffff40\]{background-color:#ffffff40}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235/var(--tw-bg-opacity))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226/var(--tw-bg-opacity))}.fill-current{fill:currentColor}.object-cover{-o-object-fit:cover;object-fit:cover}.p-12{padding:3rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.px-8{padding-left:2rem;padding-right:2rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-2{padding-bottom:.5rem}.pt-4{padding-top:1rem}.text-center{text-align:center}.text-justify{text-align:justify}.text-base{font-size:1rem;line-height:1.5rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.leading-6{line-height:1.5rem}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81/var(--tw-text-opacity))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68/var(--tw-text-opacity))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28/var(--tw-text-opacity))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.outline-none{outline:2px solid transparent;outline-offset:2px}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,-webkit-backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}:root{--foreground-rgb:0,0,0;--background-start-rgb:214,219,220;--background-end-rgb:255,255,255}@media (prefers-color-scheme:dark){:root{--foreground-rgb:255,255,255;--background-start-rgb:0,0,0;--background-end-rgb:0,0,0}}body{color:rgb(var(--foreground-rgb));background:linear-gradient(to bottom,transparent,rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb))}body::-webkit-scrollbar{display:none}html{scroll-behavior:smooth}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:text-gray-500:hover{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity))}.focus\:border-\[\#00eb00\]:focus{--tw-border-opacity:1;border-color:rgb(0 235 0/var(--tw-border-opacity))}.focus\:shadow-md:focus{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}@media (min-width:640px){.sm\:inline{display:inline}.sm\:w-\[50vw\]{width:50vw}.sm\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}}@media (min-width:768px){.md\:w-\[50vw\]{width:50vw}.md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}@media (min-width:1024px){.lg\:w-\[40vw\]{width:40vw}.lg\:grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.lg\:px-8{padding-left:2rem;padding-right:2rem}}</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Age: 290208</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Validate that the response does not contain sensitive, personal or user-specific information.  If it does, consider the use of the following HTTP response headers, to limit, or prevent the content being stored and retrieved from the cache by another user:</p>
+
+<p>Cache-Control: no-cache, no-store, must-revalidate, private</p>
+
+<p>Pragma: no-cache</p>
+
+<p>Expires: 0</p>
+
+<p>This configuration directs both HTTP 1.0 and HTTP 1.1 compliant caching servers to not store the response, and to not retrieve the response (without validation) from the cache, in response to a similar request.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Informational</span>, <span>Confidence</span>=<span
+							class="confidence-level">Low</span> <span>(2)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">https://hemantkathuria.vercel.app</span> <span>(2)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-7">Information Disclosure - Suspicious Comments</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/_next/static/chunks/app/layout-8d92e008ed8ddc15.js</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage">WSTG-v42-INFO-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response appears to contain suspicious comments which may help an attacker. Note: Matches made within script blocks or files are against the entire content not only comments.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The following pattern was used: \bFROM\b and was detected in the element starting with: &quot;(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[185],{96806:function(e,n,t){Promise.resolve().then(t.bind(t,44441)),Pro&quot;, see evidence field for the suspicious comment/snippet.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (411 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/_next/static/chunks/app/layout-8d92e008ed8ddc15.js HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Referer: https://hemantkathuria.vercel.app/
+Connection: keep-alive
+Sec-Fetch-Dest: script
+Sec-Fetch-Mode: no-cors
+Sec-Fetch-Site: same-origin
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (614 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 290209
+Cache-Control: public,max-age=31536000,immutable
+Connection: keep-alive
+Content-Disposition: inline; filename=&quot;layout-8d92e008ed8ddc15.js&quot;
+Content-Length: 2953
+Content-Type: application/javascript; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:23 GMT
+Etag: &quot;aff8b2e7dfd7f0a05388bd3b7b4a5a83&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Matched-Path: /_next/static/chunks/app/layout-8d92e008ed8ddc15.js
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::svszt-1708789763552-4a80764a654e
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2953 bytes)</summary>
+				
+				<pre><code>(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[185],{96806:function(e,n,t){Promise.resolve().then(t.bind(t,44441)),Promise.resolve().then(t.t.bind(t,18089,23)),Promise.resolve().then(t.t.bind(t,92489,23))},92489:function(){},18089:function(e){e.exports={style:{fontFamily:&quot;&#39;__Inter_e66fe9&#39;, &#39;__Inter_Fallback_e66fe9&#39;&quot;,fontStyle:&quot;normal&quot;},className:&quot;__className_e66fe9&quot;}},44441:function(e,n,t){&quot;use strict&quot;;t.r(n),t.d(n,{Analytics:function(){return Analytics},track:function(){return track}});var r=t(2265),initQueue=()=&gt;{window.va||(window.va=function(...e){(window.vaq=window.vaq||[]).push(e)})};function isBrowser(){return&quot;undefined&quot;!=typeof window}function detectEnvironment(){return&quot;production&quot;}function setMode(e=&quot;auto&quot;){if(&quot;auto&quot;===e){window.vam=detectEnvironment();return}window.vam=e}function getMode(){let e=isBrowser()?window.vam:detectEnvironment();return e||&quot;production&quot;}function isProduction(){return&quot;production&quot;===getMode()}function isDevelopment(){return&quot;development&quot;===getMode()}function removeKey(e,{[e]:n,...t}){return t}function parseProperties(e,n){if(!e)return;let t=e,r=[];for(let[o,i]of Object.entries(e))&quot;object&quot;==typeof i&amp;&amp;null!==i&amp;&amp;(n.strip?t=removeKey(o,t):r.push(o));if(r.length&gt;0&amp;&amp;!n.strip)throw Error(`The following properties are not valid: ${r.join(&quot;, &quot;)}. Only strings, numbers, booleans, and null are allowed.`);return t}function inject(e={debug:!0}){var n;if(!isBrowser())return;setMode(e.mode),initQueue(),e.beforeSend&amp;&amp;(null==(n=window.va)||n.call(window,&quot;beforeSend&quot;,e.beforeSend));let t=isDevelopment()?&quot;https://va.vercel-scripts.com/v1/script.debug.js&quot;:&quot;/_vercel/insights/script.js&quot;;if(document.head.querySelector(`script[src*=&quot;${t}&quot;]`))return;let r=document.createElement(&quot;script&quot;);r.src=t,r.defer=!0,r.setAttribute(&quot;data-sdkn&quot;,&quot;@vercel/analytics&quot;),r.setAttribute(&quot;data-sdkv&quot;,&quot;1.1.1&quot;),r.onerror=()=&gt;{let e=isDevelopment()?&quot;Please check if any ad blockers are enabled and try again.&quot;:&quot;Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information.&quot;;console.log(`[Vercel Web Analytics] Failed to load script from ${t}. ${e}`)},isDevelopment()&amp;&amp;!1===e.debug&amp;&amp;r.setAttribute(&quot;data-debug&quot;,&quot;false&quot;),document.head.appendChild(r)}function track(e,n){var t,r;if(!isBrowser()){let e=&quot;[Vercel Web Analytics] Please import `track` from `@vercel/analytics/server` when using this function in a server environment&quot;;if(isProduction())console.warn(e);else throw Error(e);return}if(!n){null==(t=window.va)||t.call(window,&quot;event&quot;,{name:e});return}try{let t=parseProperties(n,{strip:isProduction()});null==(r=window.va)||r.call(window,&quot;event&quot;,{name:e,data:t})}catch(e){e instanceof Error&amp;&amp;isDevelopment()&amp;&amp;console.error(e)}}function Analytics({beforeSend:e,debug:n=!0,mode:t=&quot;auto&quot;}){return(0,r.useEffect)(()=&gt;{inject({beforeSend:e,debug:n,mode:t})},[e,n,t]),null}}},function(e){e.O(0,[971,472,744],function(){return e(e.s=96806)}),_N_E=e.O()}]);</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>from</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Remove all comments that return information that may help an attacker and fix any underlying problems they refer to.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-8">Re-examine Cache-control Directives</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET https://hemantkathuria.vercel.app/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/04-Authentication_Testing/06-Testing_for_Browser_Cache_Weaknesses">WSTG-v42-ATHN-06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The cache-control header has not been set properly or is missing, allowing the browser and proxies to cache content. For static assets like css, js, or image files this might be intended, however, the resources should be reviewed to ensure that no sensitive content will be cached.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (444 bytes)</summary>
+				
+				<pre><code>GET https://hemantkathuria.vercel.app/ HTTP/1.1
+host: hemantkathuria.vercel.app
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:122.0) Gecko/20100101 Firefox/122.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (582 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 1554169
+Cache-Control: public, max-age=0, must-revalidate
+Connection: keep-alive
+Content-Disposition: inline
+Content-Length: 11218
+Content-Type: text/html; charset=utf-8
+Date: Sat, 24 Feb 2024 15:49:22 GMT
+Etag: &quot;0cf555f1cc16c2519488ece968d8e2fe&quot;
+Server: Vercel
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Url
+X-Matched-Path: /
+X-Vercel-Cache: HIT
+X-Vercel-Id: bom1::wvrcl-1708789762316-cf44e769a16d
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (11218 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;&lt;meta charSet=&quot;utf-8&quot;/&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;/&gt;&lt;link rel=&quot;preload&quot; href=&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2&quot; as=&quot;font&quot; crossorigin=&quot;&quot; type=&quot;font/woff2&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/a18628feb20ba0f7.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/_next/static/css/761dadba814ae197.css&quot; crossorigin=&quot;&quot; data-precedence=&quot;next&quot;/&gt;&lt;link rel=&quot;preload&quot; as=&quot;script&quot; fetchPriority=&quot;low&quot; href=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/fd9d1056-30e544cb6de43a74.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/472-575ab5a3314ad148.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/main-app-b120517776e8c69c.js&quot; async=&quot;&quot; crossorigin=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/260-c3fb89c23b0e342d.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/138-d1da8e772089d288.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/page-4c8448e1a7194608.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script src=&quot;/_next/static/chunks/app/layout-8d92e008ed8ddc15.js&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;title&gt;HeManT&lt;/title&gt;&lt;meta name=&quot;description&quot; content=&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.&quot;/&gt;&lt;link rel=&quot;canonical&quot; href=&quot;https://hemantkathuria.vercel.app/&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;en-US&quot; href=&quot;https://hemantkathuria.vercel.app/en-US&quot;/&gt;&lt;link rel=&quot;alternate&quot; hrefLang=&quot;de-DE&quot; href=&quot;https://hemantkathuria.vercel.app/de-DE&quot;/&gt;&lt;meta property=&quot;og:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta property=&quot;og:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta property=&quot;og:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta property=&quot;og:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;meta name=&quot;twitter:card&quot; content=&quot;summary_large_image&quot;/&gt;&lt;meta name=&quot;twitter:image:type&quot; content=&quot;image/png&quot;/&gt;&lt;meta name=&quot;twitter:image:width&quot; content=&quot;785&quot;/&gt;&lt;meta name=&quot;twitter:image:height&quot; content=&quot;230&quot;/&gt;&lt;meta name=&quot;twitter:image&quot; content=&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141&quot;/&gt;&lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; type=&quot;image/x-icon&quot; sizes=&quot;16x16&quot;/&gt;&lt;meta name=&quot;next-size-adjust&quot;/&gt;&lt;script src=&quot;/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js&quot; crossorigin=&quot;&quot; noModule=&quot;&quot;&gt;&lt;/script&gt;&lt;/head&gt;&lt;body class=&quot;__className_e66fe9&quot;&gt;&lt;div&gt;&lt;div style=&quot;position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1&quot;&gt;&lt;canvas style=&quot;display:block;width:100%;height:100%&quot;&gt;&lt;/canvas&gt;&lt;/div&gt;&lt;div class=&quot;sideNav&quot;&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Home&quot;&gt;/&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#About&quot;&gt;/About&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Skills&quot;&gt;/Skills&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Projects&quot;&gt;/Projects&lt;/a&gt;&lt;/div&gt;&lt;div class=&quot;sideNav-button&quot;&gt;&lt;a href=&quot;#Contact&quot;&gt;/Contact&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Home&quot; style=&quot;color:white;display:block;height:100vh&quot;&gt;&lt;span class=&quot;Name&quot;&gt;Hemant &lt;span class=&quot;Subtitle1&quot;&gt;Kathuria&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;Subtitle&quot; id=&quot;Subtitle&quot;&gt;&lt;div class=&quot;Typewriter&quot; data-testid=&quot;typewriter-wrapper&quot;&gt;&lt;/div&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Skills&quot; id=&quot;Skills&quot;&gt;&lt;h3 class=&quot;Skills-title font-bold&quot;&gt;Skills&lt;/h3&gt;&lt;div class=&quot;Skills&quot;&gt;&lt;div class=&quot;Skills-grid&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;postion:fixed;z-index:1000;left:0;bottom:0&quot; id=&quot;alert-container&quot;&gt;&lt;/div&gt;&lt;div class=&quot;Parent-Projects&quot; id=&quot;Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold&quot;&gt;Projects&lt;/h3&gt;&lt;div class=&quot;grid grid-cols-1 mx-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;div id=&quot;Contact&quot; class=&quot;Parent-Projects&quot;&gt;&lt;h3 class=&quot;Project-title font-bold my-16&quot;&gt;Contact Me&lt;/h3&gt;&lt;div class=&quot;mx-auto w-full max-w-[70vw] sm:w-[50vw] md:w-[50vw] lg:w-[40vw]&quot;&gt;&lt;form&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;name&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Full Name&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Full Name&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;name&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;email&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Email Address&lt;/label&gt;&lt;input type=&quot;email&quot; placeholder=&quot;example@domain.com&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;email&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;subject&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Subject&lt;/label&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Enter your subject&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;subject&quot;/&gt;&lt;/div&gt;&lt;div class=&quot;mb-5&quot;&gt;&lt;label for=&quot;message&quot; class=&quot;mb-3 block text-base font-medium&quot;&gt;Message&lt;/label&gt;&lt;textarea rows=&quot;4&quot; placeholder=&quot;Type your message&quot; class=&quot;w-full rounded-md border border-[#e0e0e0] bg-[#ffffff40] py-3 px-6 text-base font-medium  outline-none focus:border-[#00eb00] focus:shadow-md&quot; name=&quot;message&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;div&gt;&lt;button class=&quot;hover:shadow-form rounded-md bg-[#009900] py-3 px-8 text-base font-semibold text-white outline-none&quot;&gt;Submit&lt;/button&gt;&lt;/div&gt;&lt;/form&gt;&lt;/div&gt;&lt;/div&gt;&lt;section style=&quot;margin-top:10rem&quot;&gt;&lt;div class=&quot;max-w-screen-xl px-4 py-12 mx-auto space-y-8 overflow-hidden sm:px-6 lg:px-8&quot;&gt;&lt;p class=&quot;mt-8 text-base leading-6 text-center text-gray-400&quot;&gt;© 2023 Hemant Kathuria. All rights reserved.&lt;/p&gt;&lt;/div&gt;&lt;/section&gt;&lt;/div&gt;&lt;script src=&quot;/_next/static/chunks/webpack-c736dbbd5ac33983.js&quot; crossorigin=&quot;&quot; async=&quot;&quot;&gt;&lt;/script&gt;&lt;script&gt;(self.__next_f=self.__next_f||[]).push([0]);self.__next_f.push([2,null])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;1:HL[\&quot;/_next/static/media/c9a5bc6a7c948fb0-s.p.woff2\&quot;,\&quot;font\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;,\&quot;type\&quot;:\&quot;font/woff2\&quot;}]\n2:HL[\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n0:\&quot;$L3\&quot;\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;4:HL[\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;style\&quot;,{\&quot;crossOrigin\&quot;:\&quot;\&quot;}]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;5:I[33728,[],\&quot;\&quot;]\n7:I[29928,[],\&quot;\&quot;]\n8:I[56954,[],\&quot;\&quot;]\n9:I[7264,[],\&quot;\&quot;]\nb:I[48297,[],\&quot;\&quot;]\nc:I[719,[\&quot;260\&quot;,\&quot;static/chunks/260-c3fb89c23b0e342d.js\&quot;,\&quot;138\&quot;,\&quot;static/chunks/138-d1da8e772089d288.js\&quot;,\&quot;931\&quot;,\&quot;static/chunks/app/page-4c8448e1a7194608.js\&quot;],\&quot;\&quot;]\nd:I[44441,[\&quot;185\&quot;,\&quot;static/chunks/app/layout-8d92e008ed8ddc15.js\&quot;],\&quot;Analytics\&quot;]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;3:[[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/a18628feb20ba0f7.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]],[\&quot;$\&quot;,\&quot;$L5\&quot;,null,{\&quot;buildId\&quot;:\&quot;UcCPNEaTMHhux7G_JSYAy\&quot;,\&quot;assetPrefix\&quot;:\&quot;\&quot;,\&quot;initialCanonicalUrl\&quot;:\&quot;/\&quot;,\&quot;initialTree\&quot;:[\&quot;\&quot;,{\&quot;children\&quot;:[\&quot;__PAGE__\&quot;,{}]},\&quot;$undefined\&quot;,\&quot;$undefined\&quot;,true],\&quot;initialHead\&quot;:[false,\&quot;$L6\&quot;],\&quot;globalErrorComponent\&quot;:\&quot;$7\&quot;,\&quot;children\&quot;:[null,[\&quot;$\&quot;,\&quot;html\&quot;,null,{\&quot;lang\&quot;:\&quot;en\&quot;,\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;body\&quot;,null,{\&quot;className\&quot;:\&quot;__className_e66fe9\&quot;,\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;$L8\&quot;,null,{\&quot;parallelRouterKey\&quot;:\&quot;children\&quot;,\&quot;segmentPath\&quot;:[\&quot;children\&quot;],\&quot;loading\&quot;:\&quot;$undefined\&quot;,\&quot;loadingStyles\&quot;:\&quot;$undefined\&quot;,\&quot;loadingScripts\&quot;:\&quot;$undefined\&quot;,\&quot;hasLoading\&quot;:false,\&quot;error\&quot;:\&quot;$undefined\&quot;,\&quot;errorStyles\&quot;:\&quot;$undefined\&quot;,\&quot;errorScripts\&quot;:\&quot;$undefined\&quot;,\&quot;template\&quot;:[\&quot;$\&quot;,\&quot;$L9\&quot;,null,{}],\&quot;templateStyles\&quot;:\&quot;$undefined\&quot;,\&quot;templateScripts\&quot;:\&quot;$undefined\&quot;,\&quot;notFound\&quot;:[[\&quot;$\&quot;,\&quot;title\&quot;,null,{\&quot;children\&quot;:\&quot;404: This page could not be found.\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;fontFamily\&quot;:\&quot;system-ui,\\\&quot;Segoe UI\\\&quot;,Roboto,Helvetica,Arial,sans-serif,\\\&quot;Apple Color Emoji\\\&quot;,\\\&quot;Segoe UI Emoji\\\&quot;\&quot;,\&quot;height\&quot;:\&quot;100vh\&quot;,\&quot;textAlign\&quot;:\&quot;center\&quot;,\&quot;display\&quot;:\&quot;flex\&quot;,\&quot;flexDirection\&quot;:\&quot;column\&quot;,\&quot;alignItems\&quot;:\&quot;center\&quot;,\&quot;justifyContent\&quot;:\&quot;center\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;children\&quot;:[[\&quot;$\&quot;,\&quot;style\&quot;,null,{\&quot;dangerouslySetInnerHTML\&quot;:{\&quot;__html\&quot;:\&quot;body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\&quot;}}],[\&quot;$\&quot;,\&quot;h1\&quot;,null,{\&quot;className\&quot;:\&quot;next-error-h1\&quot;,\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;,\&quot;margin\&quot;:\&quot;0 20px 0 0\&quot;,\&quot;padding\&quot;:\&quot;0 23px 0 0\&quot;,\&quot;fontSize\&quot;:24,\&quot;fontWeight\&quot;:500,\&quot;verticalAlign\&quot;:\&quot;top\&quot;,\&quot;lineHeight\&quot;:\&quot;49px\&quot;},\&quot;children\&quot;:\&quot;404\&quot;}],[\&quot;$\&quot;,\&quot;div\&quot;,null,{\&quot;style\&quot;:{\&quot;display\&quot;:\&quot;inline-block\&quot;},\&quot;children\&quot;:[\&quot;$\&quot;,\&quot;h2\&quot;,null,{\&quot;style\&quot;:{\&quot;fontSize\&quot;:14,\&quot;fontWeight\&quot;:400,\&quot;lineHeight\&quot;:\&quot;49px\&quot;,\&quot;margin\&quot;:0},\&quot;children\&quot;:\&quot;This page could not be found.\&quot;}]}]]}]}]],\&quot;notFoundStyles\&quot;:[],\&quot;childProp\&quot;:{\&quot;current\&quot;:[\&quot;$La\&quot;,[\&quot;$\&quot;,\&quot;$Lb\&quot;,null,{\&quot;propsForComponent\&quot;:{\&quot;params\&quot;:{}},\&quot;Component\&quot;:\&quot;$c\&quot;,\&quot;isStaticGeneration\&quot;:true}],null],\&quot;segment\&quot;:\&quot;__PAGE__\&quot;},\&quot;styles\&quot;:[[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;0\&quot;,{\&quot;rel\&quot;:\&quot;stylesheet\&quot;,\&quot;href\&quot;:\&quot;/_next/static/css/761dadba814ae197.css\&quot;,\&quot;precedence\&quot;:\&quot;next\&quot;,\&quot;crossOrigin\&quot;:\&quot;\&quot;}]]}],[\&quot;$\&quot;,\&quot;$Ld\&quot;,null,{}]]}]}],null]}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;6:[[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;0\&quot;,{\&quot;name\&quot;:\&quot;viewport\&quot;,\&quot;content\&quot;:\&quot;width=device-width, initial-scale=1\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;1\&quot;,{\&quot;charSet\&quot;:\&quot;utf-8\&quot;}],[\&quot;$\&quot;,\&quot;title\&quot;,\&quot;2\&quot;,{\&quot;children\&quot;:\&quot;HeManT\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;3\&quot;,{\&quot;name\&quot;:\&quot;description\&quot;,\&quot;content\&quot;:\&quot;Hello Everyone! My Name is Hemant Kathuria. I am a Cyber Security Analyst and a Full Stack Developer. I enjoy playing CTFs, developing, and learning whenever I get a chance. If you want to play a CTF or discuss anything about security, feel free to ping me.\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;4\&quot;,{\&quot;rel\&quot;:\&quot;canonical\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;5\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;en-US\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/en-US\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;6\&quot;,{\&quot;rel\&quot;:\&quot;alternate\&quot;,\&quot;hrefLang\&quot;:\&quot;de-DE\&quot;,\&quot;href\&quot;:\&quot;https://hemantkathuria.vercel.app/de-DE\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;7\&quot;,{\&quot;property\&quot;:\&quot;og:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;8\&quot;,{\&quot;property\&quot;:\&quot;og:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;9\&quot;,{\&quot;property\&quot;:\&quot;og:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;10\&quot;,{\&quot;property\&quot;:\&quot;og:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;11\&quot;,{\&quot;name\&quot;:\&quot;twitter:card\&quot;,\&quot;content\&quot;:\&quot;summary_large_image\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;12\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:type\&quot;,\&quot;content\&quot;:\&quot;image/png\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;13\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:width\&quot;,\&quot;content\&quot;:\&quot;785\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;14\&quot;,{\&quot;name\&quot;:\&quot;twitter:image:height\&quot;,\&quot;content\&quot;:\&quot;230\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;15\&quot;,{\&quot;name\&quot;:\&quot;twitter:image\&quot;,\&quot;content\&quot;:\&quot;https://hemantkathuria.vercel.app/opengraph-image.png?fe7f4a83cf017141\&quot;}],[\&quot;$\&quot;,\&quot;link\&quot;,\&quot;16\&quot;,{\&quot;rel\&quot;:\&quot;icon\&quot;,\&quot;href\&quot;:\&quot;/favicon.ico\&quot;,\&quot;type\&quot;:\&quot;image/x-icon\&quot;,\&quot;sizes\&quot;:\&quot;16x16\&quot;}],[\&quot;$\&quot;,\&quot;meta\&quot;,\&quot;17\&quot;,{\&quot;name\&quot;:\&quot;next-size-adjust\&quot;}]]\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;a:null\n&quot;])&lt;/script&gt;&lt;script&gt;self.__next_f.push([1,&quot;&quot;])&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>cache-control</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>public, max-age=0, must-revalidate</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>For secure content, ensure the cache-control HTTP header is set with &quot;no-cache, no-store, must-revalidate&quot;. If an asset should be cached consider setting the directives &quot;public, max-age, immutable&quot;.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>Cloud Metadata Potentially Exposed</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by an active scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/90034/">Cloud Metadata Potentially Exposed</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://www.nginx.com/blog/trust-no-one-perils-of-trusting-user-input/">https://www.nginx.com/blog/trust-no-one-perils-of-trusting-user-input/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Absence of Anti-CSRF Tokens</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10202/">Absence of Anti-CSRF Tokens</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>9</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a></li>
+										<li><a
+											href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a></li>
+										<li><a
+											href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a></li>
+										<li><a
+											href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="http://content-security-policy.com/">http://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Cross-Domain Misconfiguration</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10098/">Cross-Domain Misconfiguration</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/264.html">264</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>14</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy">https://vulncat.fortify.com/en/detail?id=desc.config.dotnet.html5_overly_permissive_cors_policy</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Strict-Transport-Security Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10035/">Strict-Transport-Security Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/319.html">319</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+										<li><a
+											href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security</a></li>
+										<li><a
+											href="http://caniuse.com/stricttransportsecurity">http://caniuse.com/stricttransportsecurity</a></li>
+										<li><a
+											href="http://tools.ietf.org/html/rfc6797">http://tools.ietf.org/html/rfc6797</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>Information Disclosure - Suspicious Comments</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10027/">Information Disclosure - Suspicious Comments</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>Re-examine Cache-control Directives</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10015/">Re-examine Cache-control Directives</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/525.html">525</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching">https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html#web-content-caching</a></li>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control</a></li>
+										<li><a
+											href="https://grayduck.mn/2021/09/13/cache-control-recommendations/">https://grayduck.mn/2021/09/13/cache-control-recommendations/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-9">
+						<h4>Retrieved from Cache</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10050/">Retrieved from Cache</a>)
+									</span>   
+								</td>
+							</tr>
+							
+							
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://tools.ietf.org/html/rfc7234">https://tools.ietf.org/html/rfc7234</a></li>
+										<li><a
+											href="https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a></li>
+										<li><a
+											href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)">http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html (obsoleted by rfc7234)</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+

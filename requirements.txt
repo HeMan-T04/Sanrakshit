@@ -1,2 +1,3 @@
 flask
 zaproxy
+flask-socketio
