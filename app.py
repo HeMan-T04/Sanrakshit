@@ -5,7 +5,7 @@ import time
 import threading
 from flask import redirect
 
-
+# app intitalization 
 app = Flask(__name__)
 socketio = SocketIO(app)
 
