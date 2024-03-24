@@ -1,3 +1,4 @@
 flask
 zaproxy
 flask-socketio
+python-dotenv
