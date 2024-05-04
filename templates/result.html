@@ -1,15 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZAP Scan Result</title>
+    <title>Vulnerability scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script>
+        // Connect to the SocketIO server
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        // Function to start the Ajax Spider and update status
+        function startSpider() {
+            var targetUrl = document.getElementById('target_url').value;
+
+            // Emit a message to start the spider
+            socket.emit('start_spider', { 'target_url': targetUrl });
+
+            // Update status and show buttons on button click
+            socket.on('update_status', function (data) {
+                document.getElementById('status').innerHTML = data.status;
+
+                if (data.completed) {
+                    // Show the report and download buttons when the spider completes
+                    document.getElementById('reportButton').style.display = 'block';
+                    document.getElementById('downloadButton').style.display = 'block';
+                }
+            });
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Add this script at the end of your HTML body -->
+    <script>
+        // Function to toggle dropdown visibility
+        function toggleDropdown() {
+            var dropdownMenu = document.getElementById("myDropdown");
+            dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropdown-toggle')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+
 </head>
+
 <body>
-    <h1>ZAP Scan Result</h1>
     <div>
-        {{ report | safe }}
+        <header>
+            <nav class="navbar">
+                <img class="nav-logo" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+                <ul>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Pricing</li>
+                    <li>Resources</li>
+                </ul>
+                <div class="buttons">
+                    <a class="buttons" href="">Sign in</a>
+                    <button class="btn">Register</button>
+                </div>
+            </nav>
+        </header>
+        <div style="margin: 0 8rem 0 8rem">
+            <div style="display:flex; justify-content: space-between; ">
+                <p style="color: #FFF;
+            font-family: Poppins;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;;">Your Report</p>
+
+                <button class="btn" id="downloadButton" style="width: 8.9375rem;
+            height: 2.8125rem;
+            flex-shrink: 0; margin-top: 4rem;">Download</button>
+            </div>
+            <p style="color: #FFF;
+        font-family: Poppins;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;">Total Vulnerabilities Detected : 52</p>
+            <div
+                style=" display: flex; justify-content: space-between;height: 19.0625rem;flex-shrink: 0;border-radius: 1.5rem;background: #640F25;">
+                <p
+                    style="color: #FFF; font-family: Poppins;font-size: 2.5rem;font-style: normal;font-weight: 500;line-height: normal; margin-left:4rem; margin-top:5rem;">
+                    Too Many <br />
+                    Vulnerabilities: Found</p>
+                <img src="{{ url_for('static', filename='images/high.png') }}" alt="">
+            </div>
+            <div style="display: flex; margin-top:3rem;">
+                <div style="width: 41vw; margin-right:2vw;
+                height: 25rem;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
+                    <p style="color: #FFF;
+                    font-family: Poppins;
+                    font-size: 1.25rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal; margin-left:3rem; margin-top:2rem">Alert counts by site and risk</p>
+                    <canvas id="alertChart" width="250rem" height="100rem" style="margin: 0 2rem 0 2rem; color: #FFF;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;"></canvas>
+                    <script>
+                        var ctx = document.getElementById('alertChart').getContext('2d');
+                        Chart.defaults.color = "#fff";
+                        var data = {
+                            labels: ['High', 'Medium', 'Low', 'Informational'],
+                            datasets: [{
+                                backgroundColor: ['#E46D00', '#E7CFA0', '#E46D00', '#E7CFA0'],
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                borderWidth: 1,
+                                data: [10, 20, 15, 5]
+                            }]
+                        };
+
+                        var options = {
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                    labels: {
+                                        font: {
+                                            family: "Poppins"
+                                        },
+                                        color: 'white'
+                                    }
+                                }
+                            },
+                            scales: {
+                                yAxes: [{
+                                    gridLines: {
+                                        // display: false,
+                                        color: "#FFFFFF"
+                                    },
+                                    ticks: {
+                                        beginAtZero: true
+                                    }
+                                }],
+                                xAxes: [{
+                                    gridLines: {
+                                        // display: false,
+                                        color: "#FFFFFF"
+                                    },
+                                    ticks: {
+                                        display: false // Remove x-axis labels
+                                    }
+                                }]
+                            },
+                            legend: {
+                                display: false // Remove legend
+                            },
+                            barPercentage: 0.5
+                        };
+
+                        var alertChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: data,
+                            options: options
+                        });
+                    </script>
+
+
+                </div>
+
+                <div style="width: 41vw; margin-left:2vw;
+                height: 25rem;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
+
+                </div>
+
+            </div>
+            <div style="display: flex; margin-top:3rem;">
+                <div style="width: 60vw; margin-right:2vw;
+               height: 12.8125rem;;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
+                    <p style="color: #FFF;
+                    font-family: Poppins;
+                    font-size: 1.25rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;margin-left:3rem;margin-top:2rem">Cloud Metadata Potentially Exposed</p>
+                    <ul style="color: #FFF;
+                    font-family: Poppins;
+                    font-size: 1.25rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;margin-left:2rem;">
+                        <li>Risk=High, Confidence=Low (1)</li>
+                        <li>https://hemantkathuria.vercel.app</li>
+                        <li>GET https://hemantkathuria.vercel.app/latest/meta-data/</li>
+                    </ul>
+                </div>
+                <div style="width: 22vw; margin-left:2vw; display:flex; 
+                height: 12.8125rem;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 2.25rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal; margin-left:3rem; margin-top:3.5rem">View More <br />Detail</p>
+                    <svg style="margin:3.5rem 0 0 2rem" xmlns="http://www.w3.org/2000/svg" width="108" height="108"
+                        viewBox="0 0 108 108" fill="none">
+                        <circle cx="53.958" cy="53.958" r="39.5" transform="rotate(-30 53.958 53.958)" fill="#E46D00" />
+                        <path
+                            d="M38.3569 60.7933C37.4572 61.3128 37.149 62.4631 37.6684 63.3628C38.1878 64.2624 39.3382 64.5707 40.2378 64.0513L38.3569 60.7933ZM70.4354 45.9806C70.7042 44.9771 70.1088 43.9457 69.1053 43.6769L52.7536 39.2954C51.7502 39.0266 50.7188 39.622 50.4499 40.6255C50.181 41.6289 50.7765 42.6603 51.7799 42.9292L66.3148 46.8238L62.4202 61.3586C62.1513 62.3621 62.7468 63.3935 63.7502 63.6623C64.7537 63.9312 65.7851 63.3357 66.0539 62.3323L70.4354 45.9806ZM40.2378 64.0513L69.559 47.1227L67.678 43.8648L38.3569 60.7933L40.2378 64.0513Z"
+                            fill="white" />
+                    </svg>
+
+                </div>
+
+            </div>
+        </div>
+        <footer
+            style="background: #18191D;margin-top:3rem; padding:2rem; display:flex; justify-content: space-between;">
+            <img style="height:3rem;margin-left:7rem;" src="{{ url_for('static', filename='images/footer-logo.png') }}"
+                alt="">
+            <div style="display:flex; gap: 6rem; margin-right:7rem">
+                <div>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 1.17313rem */
+                letter-spacing: 0.18rem;">Quick Links</p>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 0.87988rem */
+                letter-spacing: 0.135rem;">About</p>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 0.87988rem */
+                letter-spacing: 0.135rem;">Services</p>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 0.87988rem */
+                letter-spacing: 0.135rem;">Pricing</p>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 0.87988rem */
+                letter-spacing: 0.135rem;">FAQ</p>
+                </div>
+                <div>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 1rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 1.17313rem */
+                letter-spacing: 0.18rem;">Help</p>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 0.87988rem */
+                letter-spacing: 0.135rem;">Customer Care</p>
+                    <p style="color: #FFF;
+                font-family: Poppins;
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 117.313%; /* 0.87988rem */
+                letter-spacing: 0.135rem;">Support</p>
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
+
 </html>
