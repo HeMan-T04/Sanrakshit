@@ -96,8 +96,8 @@
         font-size: 1.5rem;
         font-style: normal;
         font-weight: 500;
-        line-height: normal;">Total Vulnerabilities Detected : 52</p>
-            <div
+        line-height: normal;" id="total_vulnerabilities">Total Vulnerabilities Detected: {{ total_vulnerabilities }}</p>
+            <div class="Vuln"
                 style=" display: flex; justify-content: space-between;height: 19.0625rem;flex-shrink: 0;border-radius: 1.5rem;background: #640F25;">
                 <p
                     style="color: #FFF; font-family: Poppins;font-size: 2.5rem;font-style: normal;font-weight: 500;line-height: normal; margin-left:4rem; margin-top:5rem;">
@@ -128,7 +128,7 @@
                             labels: ['High', 'Medium', 'Low', 'Informational'],
                             datasets: [{
                                 backgroundColor: ['#E46D00', '#E7CFA0', '#E46D00', '#E7CFA0'],
-                                borderColor: 'rgba(255, 99, 132, 1)',
+
                                 borderWidth: 1,
                                 data: [10, 20, 15, 5]
                             }]
@@ -148,18 +148,16 @@
                             },
                             scales: {
                                 yAxes: [{
-                                    gridLines: {
-                                        // display: false,
-                                        color: "#FFFFFF"
+                                    grid: {
+                                        color: "#2F323B" // Change grid color to #2F323B
                                     },
                                     ticks: {
                                         beginAtZero: true
                                     }
                                 }],
                                 xAxes: [{
-                                    gridLines: {
-                                        // display: false,
-                                        color: "#FFFFFF"
+                                    grid: {
+                                        color: "#2F323B" // Change grid color to #2F323B
                                     },
                                     ticks: {
                                         display: false // Remove x-axis labels
@@ -182,10 +180,84 @@
 
                 </div>
 
-                <div style="width: 41vw; margin-left:2vw;
-                height: 25rem;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
-
+                <div class="line-graph" style="width: 41vw; margin-left: 2vw; height: 25rem; flex-shrink: 0; border-radius: 1.5rem; background: #242731;">
+                    <canvas id="lineChart" style="margin: 2rem 2rem 0 2rem; color: #FFF;
+                    text-align: center;
+                    font-family: Poppins;
+                    font-size: 0.875rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal;" width="750rem" height="350rem"></canvas>
+                    <script>
+                        var ctx = document.getElementById('lineChart').getContext('2d');
+                        var data = {
+                            labels: ['User Confirmed', 'High', 'Medium', 'Low', 'Total'],
+                            datasets: [
+                                {
+                                    label: 'High',
+                                    data: [0, 0, 1, 1, 2], // Sample data for "High" confidence
+                                    borderColor: '#E46D00',
+                                    backgroundColor: 'transparent',
+                                    fill: false
+                                },
+                                {
+                                    label: 'Total',
+                                    data: [0, 2, 4, 3, 9], // Sample data for "Total" confidence
+                                    borderColor: '#FFFFFF',
+                                    backgroundColor: 'transparent',
+                                    fill: false
+                                }
+                            ]
+                        };
+                        var options = {
+                            plugins: {
+                                legend: {
+                                    display: false,
+                                    labels: {
+                                        font: {
+                                            family: "Poppins",
+                                            color: 'white'
+                                        }
+                                    }
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    grid: {
+                                        color: "#2F323B" // Change grid color to #2F323B
+                                    },
+                                    ticks: {
+                                        color: 'white'
+                                    }
+                                },
+                                x: {
+                                    grid: {
+                                        color: "#2F323B" // Change grid color to #2F323B
+                                    },
+                                    ticks: {
+                                        color: 'white'
+                                    }
+                                }
+                            },
+                            interaction: {
+                                mode: 'index',
+                                intersect: false,
+                            },
+                            elements: {
+                                line: {
+                                    tension: 0.4 // Adjust the tension for curved lines
+                                }
+                            }
+                        };
+                        var lineChart = new Chart(ctx, {
+                            type: 'line',
+                            data: data,
+                            options: options
+                        });
+                    </script>
                 </div>
+
 
             </div>
             <div style="display: flex; margin-top:3rem;">
