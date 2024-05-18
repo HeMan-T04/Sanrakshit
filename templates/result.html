@@ -87,9 +87,16 @@
             font-weight: 500;
             line-height: normal;;">Your Report</p>
 
-                <button class="btn" id="downloadButton" style="width: 8.9375rem;
-            height: 2.8125rem;
-            flex-shrink: 0; margin-top: 4rem;">Download</button>
+<button class="btn" onclick="downloadHTMLReport()" style="width: 8.9375rem;
+height: 2.8125rem;
+flex-shrink: 0; margin-top: 4rem;">Download</button>
+    <script>
+        // Function to download the HTML report
+        function downloadHTMLReport() {
+            // Send a GET request to the server to download the HTML report
+            window.location.href = '/download_html_report?target_url={{ target_url }}';
+        }
+    </script>
             </div>
             <p style="color: #FFF;
         font-family: Poppins;
@@ -97,14 +104,37 @@
         font-style: normal;
         font-weight: 500;
         line-height: normal;" id="total_vulnerabilities">Total Vulnerabilities Detected: {{ total_vulnerabilities }}</p>
-            <div class="Vuln"
-                style=" display: flex; justify-content: space-between;height: 19.0625rem;flex-shrink: 0;border-radius: 1.5rem;background: #640F25;">
-                <p
-                    style="color: #FFF; font-family: Poppins;font-size: 2.5rem;font-style: normal;font-weight: 500;line-height: normal; margin-left:4rem; margin-top:5rem;">
-                    Too Many <br />
-                    Vulnerabilities: Found</p>
+            <div class="Vuln" style="display: flex; justify-content: space-between; height: 19.0625rem; flex-shrink: 0; border-radius: 1.5rem;">
+                <p class="Vuln-text" style="color: #FFF; font-family: Poppins; font-size: 2.5rem; font-style: normal; font-weight: 500; line-height: normal; margin-left:4rem; margin-top:5rem;">
+                    Too Many <br />Vulnerabilities: Found
+                </p>
                 <img src="{{ url_for('static', filename='images/high.png') }}" alt="">
             </div>
+            <script>
+                // Function to update the background color and text of the .Vuln div based on vulnerability severity
+                function updateVulnDisplay(highVulns, mediumVulns) {
+                    var vulnDiv = document.querySelector('.Vuln');
+                    var vulnText = document.querySelector('.Vuln-text');
+            
+                    if (highVulns > 0) {
+                        vulnDiv.style.background = '#640F25'; // Red color for high vulnerabilities
+                        vulnText.innerHTML = 'Too Many Vulnerabilities: <br/> Found';
+                    } else if (mediumVulns > 0) {
+                        vulnDiv.style.background = '#CAAA00'; // Yellow color for medium vulnerabilities
+                        vulnText.innerHTML = 'Medium Vulnerabilities: <br/>Found';
+                    } else {
+                        vulnDiv.style.background = 'green'; // Green color for low vulnerabilities
+                        vulnText.innerHTML = 'Low Vulnerabilities: <br/>Detected';
+                    }
+                }
+            
+                // Call the function when the page loads
+                window.onload = function () {
+                    var highVulns = {{ high_vulnerabilities }};
+                    var mediumVulns = {{ medium_vulnerabilities }};
+                    updateVulnDisplay(highVulns, mediumVulns);
+                };
+            </script>
             <div style="display: flex; margin-top:3rem;">
                 <div style="width: 41vw; margin-right:2vw;
                 height: 25rem;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
@@ -127,13 +157,13 @@
                         var data = {
                             labels: ['High', 'Medium', 'Low', 'Informational'],
                             datasets: [{
-                                backgroundColor: ['#E46D00', '#E7CFA0', '#E46D00', '#E7CFA0'],
-
+                                backgroundColor: ['#E46D00', '#E7CFA0', '#E46D00', '#E7CFA0'], // Colors for high, medium, low, informational
+                    
                                 borderWidth: 1,
-                                data: [10, 20, 15, 5]
+                                data: [{{ high_vulnerabilities }}, {{ medium_vulnerabilities }}, {{ low_vulnerabilities }}, {{ informational_vulnerabilities }}] // Dynamic data
                             }]
                         };
-
+                    
                         var options = {
                             plugins: {
                                 legend: {
@@ -169,7 +199,7 @@
                             },
                             barPercentage: 0.5
                         };
-
+                    
                         var alertChart = new Chart(ctx, {
                             type: 'bar',
                             data: data,
@@ -181,106 +211,99 @@
                 </div>
 
                 <div class="line-graph" style="width: 41vw; margin-left: 2vw; height: 25rem; flex-shrink: 0; border-radius: 1.5rem; background: #242731;">
-                    <canvas id="lineChart" style="margin: 2rem 2rem 0 2rem; color: #FFF;
+                    <p style="color: #FFF;
+                    font-family: Poppins;
+                    font-size: 1.25rem;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: normal; margin-left:3rem; margin-top:2rem">Alert counts by risk and confidence</p>
+                    <canvas id="alertLineChart" style="margin: 2rem 2rem 0 2rem; color: #FFF;
                     text-align: center;
                     font-family: Poppins;
                     font-size: 0.875rem;
                     font-style: normal;
                     font-weight: 500;
-                    line-height: normal;" width="750rem" height="350rem"></canvas>
-                    <script>
-                        var ctx = document.getElementById('lineChart').getContext('2d');
+                    line-height: normal;" width="750rem" height="300rem"></canvas>
+                       <script>
+                        var ctx = document.getElementById('alertLineChart').getContext('2d');
                         var data = {
-                            labels: ['User Confirmed', 'High', 'Medium', 'Low', 'Total'],
+                            labels: ['High', 'Medium', 'Low', 'Informational'],
                             datasets: [
                                 {
-                                    label: 'High',
-                                    data: [0, 0, 1, 1, 2], // Sample data for "High" confidence
-                                    borderColor: '#E46D00',
-                                    backgroundColor: 'transparent',
+                                    label: 'User Confirmed',
+                                    borderColor: 'rgba(255, 99, 132, 1)',
+                                    data: [{{ confidence_values[0] }}, {{ confidence_values[1] }}, {{ confidence_values[2] }}, {{ confidence_values[3] }}],
                                     fill: false
                                 },
                                 {
-                                    label: 'Total',
-                                    data: [0, 2, 4, 3, 9], // Sample data for "Total" confidence
-                                    borderColor: '#FFFFFF',
-                                    backgroundColor: 'transparent',
+                                    label: 'High',
+                                    borderColor: 'rgba(255, 206, 86, 1)',
+                                    data: [{{ risk_values[0] }}, {{ risk_values[1] }}, {{ risk_values[2] }}, {{ risk_values[3] }}],
                                     fill: false
                                 }
                             ]
                         };
                         var options = {
-                            plugins: {
-                                legend: {
-                                    display: false,
-                                    labels: {
-                                        font: {
-                                            family: "Poppins",
-                                            color: 'white'
-                                        }
-                                    }
-                                }
-                            },
                             scales: {
-                                y: {
-                                    beginAtZero: true,
-                                    grid: {
-                                        color: "#2F323B" // Change grid color to #2F323B
-                                    },
-                                    ticks: {
-                                        color: 'white'
+                                x: {
+                                    title: {
+                                        display: true,
+                                        text: 'Risk Level'
                                     }
                                 },
-                                x: {
-                                    grid: {
-                                        color: "#2F323B" // Change grid color to #2F323B
-                                    },
-                                    ticks: {
-                                        color: 'white'
+                                y: {
+                                    title: {
+                                        display: true,
+                                        text: 'Count of Alerts'
                                     }
-                                }
-                            },
-                            interaction: {
-                                mode: 'index',
-                                intersect: false,
-                            },
-                            elements: {
-                                line: {
-                                    tension: 0.4 // Adjust the tension for curved lines
                                 }
                             }
                         };
-                        var lineChart = new Chart(ctx, {
+                        var alertLineChart = new Chart(ctx, {
                             type: 'line',
                             data: data,
                             options: options
                         });
                     </script>
                 </div>
-
-
             </div>
+            <!-- <div style="display: flex; margin-top:3rem;">
+                <div style="width: 86vw; margin-right:2vw; height: 12.8125rem; flex-shrink: 0; border-radius: 1.5rem; background: #242731;">
+                    <p style="color: #FFF; font-family: Poppins; font-size: 1.25rem; font-style: normal; font-weight: 500; line-height: normal; margin-left:3rem; margin-top:2rem;">Active Scan Vulnerabilities</p>
+                     -->
+                        <!-- <table class="active_scan_table" style="color: #FFF; font-family: Poppins; font-size: 1.25rem; font-style: normal; font-weight: 500; line-height: normal; margin-left:2rem;">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Risk</th>
+                                    <th>Count</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for vulnerability in active_scan_vulnerabilities %}
+                                <tr>
+                                    <td>{{ vulnerability.name }}</td>
+                                    <td>{{ vulnerability.risk }}</td>
+                                    <td>{{ vulnerability.count }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table> -->
+                <!-- </div>
+                
+            </div><br/> -->
+
             <div style="display: flex; margin-top:3rem;">
-                <div style="width: 60vw; margin-right:2vw;
-               height: 12.8125rem;;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
-                    <p style="color: #FFF;
-                    font-family: Poppins;
-                    font-size: 1.25rem;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;margin-left:3rem;margin-top:2rem">Cloud Metadata Potentially Exposed</p>
-                    <ul style="color: #FFF;
-                    font-family: Poppins;
-                    font-size: 1.25rem;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: normal;margin-left:2rem;">
-                        <li>Risk=High, Confidence=Low (1)</li>
-                        <li>https://hemantkathuria.vercel.app</li>
-                        <li>GET https://hemantkathuria.vercel.app/latest/meta-data/</li>
+                <div style="width: 60vw; margin-right:2vw; height: 12.8125rem; flex-shrink: 0; border-radius: 1.5rem; background: #242731;">
+                    <p class="topvuln" style="color: #FFF; font-family: Poppins; font-size: 1.25rem; font-style: normal; font-weight: 500; line-height: normal; margin-left:3rem; margin-top:2rem;">{{ top_vulnerability }}</p>
+                    <ul class="topvuln_details" style="color: #FFF; font-family: Poppins; font-size: 1.25rem; font-style: normal; font-weight: 500; line-height: normal; margin-left:2rem;">
+                        <li>Risk: {{ top_vulnerability_details.risk }}</li>
+                        <li>Confidence: {{ top_vulnerability_details.confidence }}</li>
+                        <li>Page: {{ top_vulnerability_details.page }}</li>
+                        <!-- Add more details as needed -->
                     </ul>
                 </div>
-                <div style="width: 22vw; margin-left:2vw; display:flex; 
+                <div onclick="downloadHTMLReport()" style="width: 22vw; margin-left:2vw; display:flex; 
                 height: 12.8125rem;flex-shrink: 0;border-radius: 1.5rem;background: #242731;">
                     <p style="color: #FFF;
                 font-family: Poppins;
